@@ -20,7 +20,7 @@
 		5BCFA285EFC9E5ACE8AB7B45E6D32598 /* String+match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA1E0FA2DA7A580D9AA749A17DD4967 /* String+match.swift */; };
 		63DC009C048921C10861723B9AF12E91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		66FB060E6B7AAF4F790D26512673C310 /* Pods-BLFoundation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FA159F662BC1106BE114CA8CE9672 /* Pods-BLFoundation_Tests-dummy.m */; };
-		6C4982D40F09EAF4B6D5A03FE39265F0 /* SPFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A1EC03166D1209A09EEB9943073BE8 /* SPFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C4982D40F09EAF4B6D5A03FE39265F0 /* BLFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A1EC03166D1209A09EEB9943073BE8 /* BLFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757D876F72627EAF389A5C889EABDD1A /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FB2A3E4296BEF5D3DEBBFE2656824A /* String+MD5.swift */; };
 		7B0E7F9657BAE80CDE28EE8C1362611F /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE2B091345A796B33ECC9FF733F67B1 /* Date+Timepiece.swift */; };
 		7DB228F58E21AF80B1CA12A8C98784A3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477368DEBD9D472D439E224B49D5131 /* String+extension.swift */; };
@@ -54,9 +54,9 @@
 		03295B6E609CCCF36A86AD0C65D502FB /* Pods-BLFoundation_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLFoundation_Example-umbrella.h"; sourceTree = "<group>"; };
 		053015722A716A2E72B3227FC8995C9E /* Pods-BLFoundation_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLFoundation_Example-dummy.m"; sourceTree = "<group>"; };
 		0B20CC631480F1A7D61BCDC94042025F /* BLFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BLFoundation.xcconfig; sourceTree = "<group>"; };
-		0F5F94C5D107399FD82342B378DC0203 /* Pods-BLFoundation_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BLFoundation_Example.modulemap"; sourceTree = "<group>"; };
+		0F5F94C5D107399FD82342B378DC0203 /* Pods-BLFoundation_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BLFoundation_Example.modulemap"; sourceTree = "<group>"; };
 		127F3714A63F81543CBAC8DCC9C18FA8 /* Dictionary+SP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+SP.swift"; path = "Sources/Dictionary+SP.swift"; sourceTree = "<group>"; };
-		12CAEA5D1AD283A73E791D10AB6F41F4 /* Pods_BLFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLFoundation_Tests.framework; path = "Pods-BLFoundation_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12CAEA5D1AD283A73E791D10AB6F41F4 /* Pods_BLFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C4A9F86C19C6B8F0313636B7AF03F /* Pods-BLFoundation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLFoundation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		256DC2EB43A7FDBA10BED60373E51CD8 /* Bool+SP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bool+SP.swift"; sourceTree = "<group>"; };
 		2953C15982D9019A080C58C1E806CE33 /* Pods-BLFoundation_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLFoundation_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -65,24 +65,24 @@
 		448E12630BDD077EB966E64313052DC3 /* Int+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Int+Timepiece.swift"; sourceTree = "<group>"; };
 		49456162ED9B1863B3ED54A84FCCFB2A /* String+operator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+operator.swift"; sourceTree = "<group>"; };
 		57FB2A3E4296BEF5D3DEBBFE2656824A /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		59A1EC03166D1209A09EEB9943073BE8 /* SPFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPFoundation.h; path = Sources/SPFoundation.h; sourceTree = "<group>"; };
+		59A1EC03166D1209A09EEB9943073BE8 /* BLFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLFoundation.h; path = Sources/BLFoundation.h; sourceTree = "<group>"; };
 		5A0EA098675ACB539686B6C6F21C606B /* Regex+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Regex+Extension.swift"; path = "Sources/Regex+Extension.swift"; sourceTree = "<group>"; };
 		5C1FA159F662BC1106BE114CA8CE9672 /* Pods-BLFoundation_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLFoundation_Tests-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		69F7B1675728F67827950F23D732AA66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BDFC77BBD19E5ED222266D4BA9C3C34 /* Pods-BLFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6D2D3E61F97F777EC9EA02A69C23BEC9 /* BLFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BLFoundation.modulemap; sourceTree = "<group>"; };
+		6D2D3E61F97F777EC9EA02A69C23BEC9 /* BLFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BLFoundation.modulemap; sourceTree = "<group>"; };
 		757DE545AE593FE0E75F1902DAB073F2 /* Int+SP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Int+SP.swift"; sourceTree = "<group>"; };
 		77CB0A639E77C52B09DB48FF54493BEA /* Array+SP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+SP.swift"; path = "Sources/Array+SP.swift"; sourceTree = "<group>"; };
-		79383F3D6D3B78EB882C316A2381FD57 /* Pods_BLFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLFoundation_Example.framework; path = "Pods-BLFoundation_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79383F3D6D3B78EB882C316A2381FD57 /* Pods_BLFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7942C98D3FA99B5AD57608D5F8B8326B /* Pods-BLFoundation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLFoundation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		85401A6651609FF24BE79A5D25D0EA43 /* String+substring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+substring.swift"; sourceTree = "<group>"; };
 		882E6A3E62B7EC0889C185F1F3EC08BA /* Double+SP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Double+SP.swift"; sourceTree = "<group>"; };
 		88A97E410140E43FF005DD57546D1551 /* Data+SP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+SP.swift"; path = "Sources/Data+SP.swift"; sourceTree = "<group>"; };
-		8D7145DC7F76CDC67F06309FFEBA80B2 /* BLFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BLFoundation.framework; path = BLFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D7145DC7F76CDC67F06309FFEBA80B2 /* BLFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3651B49961D0C1CAEB3517DE007E91 /* BLFoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLFoundation-umbrella.h"; sourceTree = "<group>"; };
 		91EEE833D00D247FDE9F184CFBB33485 /* BLFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BLFoundation-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99224D42E664FDE9A4FB02647031DE98 /* Pods-BLFoundation_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLFoundation_Tests-umbrella.h"; sourceTree = "<group>"; };
 		99487CE880807B08EDADFB672F681E5B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8665C2E4D3B67A3CB16CFD9CAC0A57 /* Pods-BLFoundation_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLFoundation_Example-resources.sh"; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		CFF403F5A79D279549E407560C491B1C /* Pods-BLFoundation_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLFoundation_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D5D3EA4FEA1C98DA79AE0335AFB7B305 /* Pods-BLFoundation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLFoundation_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		DBE2B091345A796B33ECC9FF733F67B1 /* Date+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Timepiece.swift"; sourceTree = "<group>"; };
-		DDF451EDD54191F6824074751C1A838D /* Pods-BLFoundation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BLFoundation_Tests.modulemap"; sourceTree = "<group>"; };
+		DDF451EDD54191F6824074751C1A838D /* Pods-BLFoundation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BLFoundation_Tests.modulemap"; sourceTree = "<group>"; };
 		E065E1C6625CC790E94CDA1FCFBABB6B /* Pods-BLFoundation_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLFoundation_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E8D078650D90E52FC8056A55D57F4C0B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F477368DEBD9D472D439E224B49D5131 /* String+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 				127F3714A63F81543CBAC8DCC9C18FA8 /* Dictionary+SP.swift */,
 				5A0EA098675ACB539686B6C6F21C606B /* Regex+Extension.swift */,
 				B1B41D4549232390DF930ECBCE4D5DA5 /* RunTime+SP.swift */,
-				59A1EC03166D1209A09EEB9943073BE8 /* SPFoundation.h */,
+				59A1EC03166D1209A09EEB9943073BE8 /* BLFoundation.h */,
 				9AC732C16394BC64C40A7A2A72A862A7 /* Date */,
 				39813398D973B17698BDE3EC7617F7A9 /* Encryption */,
 				C43805F2FE35A241D9792CBFFD4B6BCE /* Number */,
@@ -329,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37972D1BF34001325E1388A57F01B700 /* BLFoundation-umbrella.h in Headers */,
-				6C4982D40F09EAF4B6D5A03FE39265F0 /* SPFoundation.h in Headers */,
+				6C4982D40F09EAF4B6D5A03FE39265F0 /* BLFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
