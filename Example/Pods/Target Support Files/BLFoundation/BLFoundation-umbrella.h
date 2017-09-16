@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "SPFoundation.h"
+#import "BLFoundation.h"
 
 FOUNDATION_EXPORT double BLFoundationVersionNumber;
 FOUNDATION_EXPORT const unsigned char BLFoundationVersionString[];

@@ -51,8 +51,7 @@ public extension String {
     if range.start == range.end { return "" }
     let start = index(startIndex, offsetBy: range.start)
     let end = index(startIndex, offsetBy: range.end)
-    let lastRange = start..<end
-    return String(self[lastRange])
+    return String(self[start...end])
   }
 
   /// 截取: 区间内的子串
@@ -66,7 +65,7 @@ public extension String {
     if range.start > range.end { return "" }
     if range.start == range.end { return self[range.start] }
     let start = index(startIndex, offsetBy: range.start)
-    let end = index(startIndex, offsetBy: range.end - range.start)
+    let end = index(startIndex, offsetBy: range.end)
     return String(self[start...end])
   }
 }
