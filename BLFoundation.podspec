@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'BLFoundation'
-s.version          = '0.1.1'
+s.version          = '0.1.2'
 s.summary          = '基于 Foundation 的一些扩展'
 
 
