@@ -14,8 +14,8 @@ extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 索引
   func index(first str: String) -> String.Index? {
-    guard let char = str.characters.first else { return nil }
-    return self.index(of: char)
+    let range = self.range(of: str)
+    return range?.lowerBound
   }
 
   /// 获取指定字符串最后一个字符在母串中的索引
@@ -23,8 +23,8 @@ extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 索引
   func index(last str: String) -> String.Index? {
-    guard let char = str.characters.last else { return nil }
-    return self.index(of: char)
+    let range = self.range(of: str)
+    return range?.upperBound
   }
 }
 
