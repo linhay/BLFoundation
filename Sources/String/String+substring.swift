@@ -88,8 +88,7 @@ public extension String {
   /// - Returns: 子串
   func substring(after str: String) -> String {
     guard let index = self.index(last: str) else { return "" }
-    var str = String(self[index...])
-    str.removeFirst()
+    let str = String(self[index...])
     return str
   }
 }
