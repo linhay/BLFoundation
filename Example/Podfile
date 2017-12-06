@@ -3,9 +3,4 @@ use_frameworks!
 target 'BLFoundation_Example' do
   pod 'BLFoundation', :path => '../'
 
-  target 'BLFoundation_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
