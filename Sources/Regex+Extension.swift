@@ -31,7 +31,7 @@ public extension RegexPattern{
     case .url:
       return "(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
     case .phone:
-      return "^1[34578]\\d{9}$"
+      return "^1[3456789]\\d{9}$"
     case .email:
       return "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
     case .number(equal: let digit):
