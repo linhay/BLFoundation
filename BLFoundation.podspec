@@ -1,19 +1,41 @@
 Pod::Spec.new do |s|
-  s.name             = 'BLFoundation'
-  s.version          = '0.2.1'
-  s.summary          = 'Foundation extersion'
+s.name             = 'BLFoundation'
+s.version          = '0.3'
+s.summary          = 'Foundation extersion'
 
-  s.description      = <<-DESC
+s.description      = <<-DESC
 Foundation extersion without nothing
-                       DESC
+DESC
 
-  s.homepage         = 'https://github.com/bigL055/BLFoundation'
-  s.license          = { :type => 'Apache License 2.0', :file => 'LICENSE' }
-  s.author           = { '158179948@qq.com' => '158179948@qq.com' }
-  s.source           = { :git => 'https://github.com/bigL055/BLFoundation.git', :tag => s.version.to_s }
+s.homepage = 'https://github.com/bigL055/BLFoundation'
+s.license  = { :type => 'Apache License 2.0', :file => 'LICENSE' }
+s.author   = { '158179948@qq.com' => '158179948@qq.com' }
+s.source   = { :git => 'https://github.com/bigL055/BLFoundation.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+s.ios.deployment_target = '8.0'
 
-  s.source_files = ['Sources/*/**','Sources/**']
-  s.public_header_files = 'Sources/BLFoundation.h'
+s.source_files = ['Sources/*/**','Sources/**']
+s.public_header_files = 'Sources/BLFoundation.h'
+
+s.subspec 'String' do |ss|
+ss.source_files = 'Sources/String/**'
+end
+
+s.subspec 'Date' do |ss|
+ss.source_files = 'Sources/Date/**'
+end
+
+s.subspec 'Number' do |ss|
+ss.source_files = 'Sources/Number/**'
+end
+
+s.subspec 'Data' do |ss|
+ss.source_files = 'Sources/Data/**'
+end
+
+s.subspec 'Tools' do |ss|
+ss.source_files = 'Sources/Tools/**'
+end
+
+
 end

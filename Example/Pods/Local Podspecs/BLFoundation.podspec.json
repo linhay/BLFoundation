@@ -1,6 +1,6 @@
 {
   "name": "BLFoundation",
-  "version": "0.1.6",
+  "version": "0.2.1",
   "summary": "Foundation extersion",
   "description": "Foundation extersion without nothing",
   "homepage": "https://github.com/bigL055/BLFoundation",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/bigL055/BLFoundation.git",
-    "tag": "0.1.6"
+    "tag": "0.2.1"
   },
   "platforms": {
     "ios": "8.0"
@@ -22,5 +22,27 @@
     "Sources/*/**",
     "Sources/**"
   ],
-  "public_header_files": "Sources/BLFoundation.h"
+  "public_header_files": "Sources/BLFoundation.h",
+  "subspecs": [
+    {
+      "name": "String",
+      "source_files": "Sources/String/**"
+    },
+    {
+      "name": "Date",
+      "source_files": "Sources/Date/**"
+    },
+    {
+      "name": "Number",
+      "source_files": "Sources/Number/**"
+    },
+    {
+      "name": "Data",
+      "source_files": "Sources/Data/**"
+    },
+    {
+      "name": "Tools",
+      "source_files": "Sources/Tools/**"
+    }
+  ]
 }

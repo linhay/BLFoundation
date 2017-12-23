@@ -2,5 +2,10 @@ use_frameworks!
 
 target 'BLFoundation_Example' do
   pod 'BLFoundation', :path => '../'
+  pod 'BLFoundation/Tools', :path => '../'
+  pod 'BLFoundation/Data', :path => '../'
+  pod 'BLFoundation/String', :path => '../'
+  pod 'BLFoundation/Date', :path => '../'
+  pod 'BLFoundation/Number', :path => '../'
 
 end
