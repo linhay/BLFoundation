@@ -7,6 +7,21 @@
 
 import UIKit
 
+
+public extension Dictionary {
+
+  /// 根据下标集合获取元素集合
+  ///
+  /// - Parameter keys: 下标集合
+  public subscript(keys: [Key]) -> [Value] {
+    let values = keys.flatMap { (key) -> Value? in
+      return self[key]
+    }
+    return values
+  }
+
+}
+
 public extension Dictionary {
   /// 从字典中随机取值
   ///
