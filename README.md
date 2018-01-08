@@ -40,7 +40,7 @@ BLFoundation是一套针对于Foundation的扩展.
 
 ## Author
 
-linger, linhan.bigl055@outlook.com
+linhey, linhan.linhey@outlook.com
 
 ## License
 

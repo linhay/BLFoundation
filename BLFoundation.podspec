@@ -9,7 +9,7 @@ DESC
 
 s.homepage = 'https://github.com/bigL055/BLFoundation'
 s.license  = { :type => 'Apache License 2.0', :file => 'LICENSE' }
-s.author   = { '158179948@qq.com' => '158179948@qq.com' }
+s.author   = { 'linhey' => 'linhan.linhey@outlook.com' }
 s.source   = { :git => 'https://github.com/bigL055/BLFoundation.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '8.0'
