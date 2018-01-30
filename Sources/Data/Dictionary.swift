@@ -26,8 +26,9 @@ public extension Dictionary {
   /// 从字典中随机取值
   ///
   /// - Returns: 值
-  public var random: Value {
+  public var random: Value? {
     get{
+      if isEmpty { return nil }
       let index: Int = Int(arc4random_uniform(UInt32(self.count)))
       return Array(self.values)[index]
     }
