@@ -1,6 +1,6 @@
 {
   "name": "BLFoundation",
-  "version": "0.2.1",
+  "version": "0.4.1",
   "summary": "Foundation extersion",
   "description": "Foundation extersion without nothing",
   "homepage": "https://github.com/bigL055/BLFoundation",
@@ -9,11 +9,11 @@
     "file": "LICENSE"
   },
   "authors": {
-    "158179948@qq.com": "158179948@qq.com"
+    "linhey": "linhan.linhey@outlook.com"
   },
   "source": {
     "git": "https://github.com/bigL055/BLFoundation.git",
-    "tag": "0.2.1"
+    "tag": "0.4.1"
   },
   "platforms": {
     "ios": "8.0"
@@ -35,6 +35,10 @@
     {
       "name": "Number",
       "source_files": "Sources/Number/**"
+    },
+    {
+      "name": "URL",
+      "source_files": "Sources/URL/**"
     },
     {
       "name": "Data",

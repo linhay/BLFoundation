@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'BLFoundation'
-s.version          = '0.4.1'
+s.version          = '0.4.2'
 s.summary          = 'Foundation extersion'
 
 s.description      = <<-DESC
@@ -27,6 +27,10 @@ end
 
 s.subspec 'Number' do |ss|
 ss.source_files = 'Sources/Number/**'
+end
+
+s.subspec 'URL' do |ss|
+ss.source_files = 'Sources/URL/**'
 end
 
 s.subspec 'Data' do |ss|
