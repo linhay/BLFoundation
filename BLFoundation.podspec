@@ -1,16 +1,16 @@
 Pod::Spec.new do |s|
 s.name             = 'BLFoundation'
-s.version          = '0.4.2'
+s.version          = '0.5.0'
 s.summary          = 'Foundation extersion'
 
 s.description      = <<-DESC
 Foundation extersion without nothing
 DESC
 
-s.homepage = 'https://github.com/bigL055/BLFoundation'
+s.homepage = 'https://github.com/linhay/BLFoundation'
 s.license  = { :type => 'Apache License 2.0', :file => 'LICENSE' }
 s.author   = { 'linhey' => 'linhan.linhey@outlook.com' }
-s.source   = { :git => 'https://github.com/bigL055/BLFoundation.git', :tag => s.version.to_s }
+s.source   = { :git => 'https://github.com/linhay/BLFoundation.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '8.0'
 

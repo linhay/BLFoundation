@@ -1,6 +1,5 @@
 # BLFoundation
 
-[![CI Status](http://img.shields.io/travis/1581799848@qq.com/BLFoundation.svg?style=flat)](https://travis-ci.org/1581799848@qq.com/BLFoundation)
 [![Version](https://img.shields.io/cocoapods/v/BLFoundation.svg?style=flat)](http://cocoapods.org/pods/BLFoundation)
 [![License](https://img.shields.io/cocoapods/l/BLFoundation.svg?style=flat)](http://cocoapods.org/pods/BLFoundation)
 [![Platform](https://img.shields.io/cocoapods/p/BLFoundation.svg?style=flat)](http://cocoapods.org/pods/BLFoundation)
