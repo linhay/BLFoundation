@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     let str = "1234567890"
     let str2 = "一二三四五六七"
-    print(str[5])
-    print(str2[5])
     // Do any additional setup after loading the view, typically from a nib.
   }
 
