@@ -29,6 +29,7 @@ public extension String{
   ///   - size: 字符串长宽限制
   /// - Returns: 字符串的Bounds
   public func bounds(font: UIFont,size: CGSize) -> CGRect {
+    if self.isEmpty { return CGRect.zero }
     let attributes = [NSAttributedStringKey.font: font]
     let option = NSStringDrawingOptions.usesLineFragmentOrigin
     let rect = self.boundingRect(with: size, options: option, attributes: attributes, context: nil)
@@ -48,6 +49,7 @@ public extension String{
                    size: CGSize,
                    margins: CGFloat = 0,
                    space: CGFloat = 0) -> CGSize {
+    if self.isEmpty { return CGSize.zero }
     var bound = self.bounds(font: font, size: size)
     let rows = self.rows(font: font, width: size.width)
     bound.size.height += margins * 2
@@ -62,6 +64,7 @@ public extension String{
   ///   - width: 最大宽度
   /// - Returns: 行数
   public func rows(font: UIFont,width: CGFloat) -> CGFloat {
+    if self.isEmpty { return 0 }
     // 获取单行时候的内容的size
     let singleSize = (self as NSString).size(withAttributes: [NSAttributedStringKey.font:font])
     // 获取多行时候,文字的size
