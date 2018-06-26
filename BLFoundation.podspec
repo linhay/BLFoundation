@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'BLFoundation'
-s.version          = '0.5.3'
+s.version          = '0.5.4'
 s.summary          = 'Foundation extersion'
 
 s.description      = <<-DESC

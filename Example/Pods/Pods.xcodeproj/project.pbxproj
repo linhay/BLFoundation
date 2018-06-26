@@ -28,6 +28,7 @@
 		C795E90DB16F1B12FD0E653B48730D9B /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F165D3FD65467B6B367EC91BFBFB2 /* Dictionary.swift */; };
 		CA97BC06127FCACC4DBA48AD34EE9467 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		CCE73DBDD43B5B84817D90586C548F34 /* String+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1D7D51FC44496F4089C63E978DC3E /* String+format.swift */; };
+		CDD07A2C20E219980069A715 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD07A2B20E219980069A715 /* Coder.swift */; };
 		D0B0EE4E75D00D8CDD98F6EF755C592C /* Pods-BLFoundation_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF6A4B22377701C04F5C6FDFFBAF774 /* Pods-BLFoundation_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E149B95CBA7133D864DF5CDF03B3E579 /* Pods-BLFoundation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A90EB49CDC38FAD39A504AF23A775FE /* Pods-BLFoundation_Example-dummy.m */; };
 		E3598A59625EF0E25A85BA344FCD166A /* String+match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD6798D6C113CD188021E23D6C8D7AA /* String+match.swift */; };
@@ -86,6 +87,7 @@
 		BD33AF3C8171434D9896D5014A6675FD /* Pods-BLFoundation_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLFoundation_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BE0A24920CB2C7A731C9F72E3D2D1218 /* Pods-BLFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C88C1E7F0F53F9418F8FA1386535C825 /* Regex+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Regex+Extension.swift"; sourceTree = "<group>"; };
+		CDD07A2B20E219980069A715 /* Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
 		CF5920266FCC43BAAC23DB555A409B68 /* BLFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BLFoundation.modulemap; sourceTree = "<group>"; };
 		D93AB9F760604BC0F1D41976474B1C6B /* Pods-BLFoundation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLFoundation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E2FF10B7647DB6572E453DFA03F8355F /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				11D2B5B3E93350EAFE145A60BC73CD83 /* Array.swift */,
 				FF023397DF191E0130C5A759DC24352F /* Data.swift */,
 				423F165D3FD65467B6B367EC91BFBFB2 /* Dictionary.swift */,
+				CDD07A2B20E219980069A715 /* Coder.swift */,
 			);
 			name = Data;
 			path = Sources/Data;
@@ -407,6 +410,7 @@
 				A60E223714A7BEFED17E728420B237B0 /* Int.swift in Sources */,
 				221492FE983B4FC56E823933A019EB5F /* Regex+Extension.swift in Sources */,
 				54756741F3C0898D430C0E46E84D226E /* RunTime.swift in Sources */,
+				CDD07A2C20E219980069A715 /* Coder.swift in Sources */,
 				301F2131028469171B46EE9F040C579C /* String+extension.swift in Sources */,
 				CCE73DBDD43B5B84817D90586C548F34 /* String+format.swift in Sources */,
 				E3598A59625EF0E25A85BA344FCD166A /* String+match.swift in Sources */,
