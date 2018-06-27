@@ -9,7 +9,11 @@ s.author   = { 'linhay' => 'is.linhay@outlook.com' }
 s.source   = { :git => 'https://github.com/linhay/BLFoundation.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '8.0'
+s.tvos.deployment_target = '9.0'
+s.osx.deployment_target = '10.10'
+s.watchos.deployment_target = '2.0'
 
+s.public_header_files = ["Sources/BLFoundation.h"]
 s.source_files = ['Sources/*/**','Sources/**']
 
 s.subspec 'String' do |ss|
