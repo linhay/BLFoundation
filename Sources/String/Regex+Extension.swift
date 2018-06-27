@@ -25,7 +25,6 @@ import Foundation
 public enum RegexPattern {
   case none
   case ipv4
-  case illegal
   case url
   case phone
   case email
@@ -41,8 +40,6 @@ public extension RegexPattern{
     switch self {
     case .none: return ""
     case .ipv4: return "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
-    case .illegal:
-      return "[\\\\'\"//\\[\\]{}<>＜＞「」：；、•^\\n\\s*\r]"
     case .url:
       return "(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
     case .phone:
