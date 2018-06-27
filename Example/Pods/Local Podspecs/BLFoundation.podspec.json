@@ -1,19 +1,18 @@
 {
   "name": "BLFoundation",
-  "version": "0.4.1",
-  "summary": "Foundation extersion",
-  "description": "Foundation extersion without nothing",
-  "homepage": "https://github.com/bigL055/BLFoundation",
+  "version": "0.5.5",
+  "summary": "A set of useful categories for Foundation.",
+  "homepage": "https://github.com/linhay/BLFoundation",
   "license": {
-    "type": "Apache License 2.0",
+    "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "linhey": "linhan.linhey@outlook.com"
+    "linhay": "is.linhay@outlook.com"
   },
   "source": {
-    "git": "https://github.com/bigL055/BLFoundation.git",
-    "tag": "0.4.1"
+    "git": "https://github.com/linhay/BLFoundation.git",
+    "tag": "0.5.5"
   },
   "platforms": {
     "ios": "8.0"
@@ -22,7 +21,6 @@
     "Sources/*/**",
     "Sources/**"
   ],
-  "public_header_files": "Sources/BLFoundation.h",
   "subspecs": [
     {
       "name": "String",

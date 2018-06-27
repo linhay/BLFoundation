@@ -152,7 +152,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				354B9F139D5B337F4F52E270 /* [CP] Embed Pods Frameworks */,
-				D06BA86FD388767EA514EFF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,21 +246,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D06BA86FD388767EA514EFF0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

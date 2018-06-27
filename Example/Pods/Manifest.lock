@@ -1,17 +1,17 @@
 PODS:
-  - BLFoundation (0.4.1):
-    - BLFoundation/Data (= 0.4.1)
-    - BLFoundation/Date (= 0.4.1)
-    - BLFoundation/Number (= 0.4.1)
-    - BLFoundation/String (= 0.4.1)
-    - BLFoundation/Tools (= 0.4.1)
-    - BLFoundation/URL (= 0.4.1)
-  - BLFoundation/Data (0.4.1)
-  - BLFoundation/Date (0.4.1)
-  - BLFoundation/Number (0.4.1)
-  - BLFoundation/String (0.4.1)
-  - BLFoundation/Tools (0.4.1)
-  - BLFoundation/URL (0.4.1)
+  - BLFoundation (0.5.5):
+    - BLFoundation/Data (= 0.5.5)
+    - BLFoundation/Date (= 0.5.5)
+    - BLFoundation/Number (= 0.5.5)
+    - BLFoundation/String (= 0.5.5)
+    - BLFoundation/Tools (= 0.5.5)
+    - BLFoundation/URL (= 0.5.5)
+  - BLFoundation/Data (0.5.5)
+  - BLFoundation/Date (0.5.5)
+  - BLFoundation/Number (0.5.5)
+  - BLFoundation/String (0.5.5)
+  - BLFoundation/Tools (0.5.5)
+  - BLFoundation/URL (0.5.5)
 
 DEPENDENCIES:
   - BLFoundation (from `../`)
@@ -23,11 +23,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   BLFoundation:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  BLFoundation: c2eb1f6fc6b85607bf0973770740054d2052e43a
+  BLFoundation: 8d953286c7c22b9a721fcf61b9cf05debfff0e6a
 
 PODFILE CHECKSUM: 91a476ec4b86371bc4e4d518fb17f7d595172592
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

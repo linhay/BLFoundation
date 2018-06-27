@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  BLFoundation
 //
-//  Created by 1581799848@qq.com on 09/15/2017.
-//  Copyright (c) 2017 1581799848@qq.com. All rights reserved.
+//  Created by is.linhay@outlook.com on 09/15/2017.
+//  Copyright (c) 2017 is.linhay@outlook.com. All rights reserved.
 //
 
 import UIKit
