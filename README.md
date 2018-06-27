@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/linhay/BLFoundation/master/Screenshot/logo.jpg" alt="BLFoundation" title="BLFoundation"/>
+<img src="https://raw.githubusercontent.com/linhay/BLFoundation/master/Screenshot/logo.png" alt="BLFoundation" title="BLFoundation"/>
 </p>
 
 [![build](https://travis-ci.org/linhay/BLFoundation.svg?branch=master)](https://travis-ci.org/BLFoundation/BLFoundation)
