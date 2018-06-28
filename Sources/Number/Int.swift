@@ -39,8 +39,6 @@ public extension Int {
   public var double: Double { return Double(self) }
   /// 转换: Float.
   public var float: Float { return Float(self) }
-  /// 转换: CGFloat.
-  public var cgFloat: CGFloat { return CGFloat(self) }
   /// 转换: String.
   public var string: String { return String(self) }
   /// 转换: Bool.

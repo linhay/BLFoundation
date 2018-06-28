@@ -26,6 +26,14 @@ public extension Float{
   public var cgFloat: CGFloat { return CGFloat(self) }
 }
 
+public extension Double {
+  public var cgFloat: CGFloat { return CGFloat(self) }
+}
+
+public extension Int {
+  public var cgFloat: CGFloat { return CGFloat(self) }
+}
+
 public extension CGFloat{
   /// 绝对值
   public var abs: CGFloat { return Swift.abs(self) }

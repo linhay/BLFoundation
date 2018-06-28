@@ -27,6 +27,8 @@ end
 
 s.subspec 'Number' do |ss|
 ss.source_files = 'Sources/Number/**'
+s.osx.exclude_files = ["Sources/Number/CGFloat.swift"]
+s.watchos.exclude_files = ["Sources/Number/CGFloat.swift"]
 end
 
 s.subspec 'URL' do |ss|

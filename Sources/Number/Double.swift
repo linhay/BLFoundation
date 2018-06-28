@@ -27,8 +27,6 @@ public extension Double {
   public var int: Int { return Int(self) }
   /// Double转String
   public var string: String { return String(self) }
-  /// Double转CGFloat
-  public var cgFloat: CGFloat { return CGFloat(self) }
   /// Double转Float
   public var float: Float { return Float(self) }
   /// 绝对值
