@@ -18,7 +18,6 @@ s.source_files = ['Sources/*/**','Sources/**']
 
 s.subspec 'String' do |ss|
 ss.source_files = 'Sources/String/**'
-s.osx.exclude_files = ["Sources/String/String+UIKit.swift"]
 end
 
 s.subspec 'Date' do |ss|
@@ -27,8 +26,6 @@ end
 
 s.subspec 'Number' do |ss|
 ss.source_files = 'Sources/Number/**'
-s.osx.exclude_files = ["Sources/Number/CGFloat.swift"]
-s.watchos.exclude_files = ["Sources/Number/CGFloat.swift"]
 end
 
 s.subspec 'URL' do |ss|
