@@ -27,6 +27,11 @@
     "Sources/*/**",
     "Sources/**"
   ],
+  "osx": {
+    "exclude_files": [
+      "Sources/String/String+UIKit.swift"
+    ]
+  },
   "subspecs": [
     {
       "name": "String",

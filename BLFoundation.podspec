@@ -18,6 +18,7 @@ s.source_files = ['Sources/*/**','Sources/**']
 
 s.subspec 'String' do |ss|
 ss.source_files = 'Sources/String/**'
+s.osx.exclude_files = ["Sources/String/String+UIKit.swift"]
 end
 
 s.subspec 'Date' do |ss|
