@@ -22,20 +22,27 @@
 
 import Foundation
 
+public enum DateFormatMode : Int {
+  case time
+  case date
+  case dateAndTime
+  case countDownTimer
+}
+
 public extension Date {
 
   public var now: Date{ return Date(timeIntervalSinceNow: 0) }
 
-  public static func format(toString date:Date,mode: UIDatePickerMode) -> String {
+  public static func format(toString date:Date,mode: DateFormatMode) -> String {
     let dateFormatter = setDateFormatter(mode: mode)
     return dateFormatter.string(from: date)
   }
 
-  public func format(mode: UIDatePickerMode) -> String {
+  public func format(mode: DateFormatMode) -> String {
     return Date.format(toString: self, mode: mode)
   }
 
-  public static func initWith(string: String, mode: UIDatePickerMode) -> Date? {
+  public static func initWith(string: String, mode: DateFormatMode) -> Date? {
     let dateFormatter = setDateFormatter(mode: mode)
     guard let date = dateFormatter.date(from: string) else {
       return nil
@@ -43,7 +50,7 @@ public extension Date {
     return date
   }
 
-  private static func setDateFormatter(mode: UIDatePickerMode) -> DateFormatter{
+  private static func setDateFormatter(mode: DateFormatMode) -> DateFormatter{
     let dateFormatter = DateFormatter()
     switch mode {
     case .countDownTimer:
