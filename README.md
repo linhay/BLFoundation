@@ -30,7 +30,7 @@ or pod 'BLFoundation/URL'
 
 ## Useage
 
-
+- [API Reference](https://linhay.github.io/BLFoundation/index.html) - Lastly, please remember to read the full whenever you may need a more detailed reference. 
 
 ## Author
 
