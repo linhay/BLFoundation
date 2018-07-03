@@ -15,11 +15,6 @@ PODS:
 
 DEPENDENCIES:
   - BLFoundation (from `../`)
-  - BLFoundation/Data (from `../`)
-  - BLFoundation/Date (from `../`)
-  - BLFoundation/Number (from `../`)
-  - BLFoundation/String (from `../`)
-  - BLFoundation/Tools (from `../`)
 
 EXTERNAL SOURCES:
   BLFoundation:
@@ -28,6 +23,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BLFoundation: 417e3847a4be817e8007b04e4a7574a684cfa709
 
-PODFILE CHECKSUM: 91a476ec4b86371bc4e4d518fb17f7d595172592
+PODFILE CHECKSUM: 4a239bc86e266bcc9f1a51baad7181166a0c60fd
 
 COCOAPODS: 1.5.3

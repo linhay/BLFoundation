@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     let str = "1234567890"
     let str2 = "一二三四五六七"
+    
+    self.customKeys[1] = "test-1"
+    print( self.customKeys[1])
     // Do any additional setup after loading the view, typically from a nib.
   }
 
