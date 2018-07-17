@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source_files = ['Sources/*.h']
   
   s.subspec 'Thread' do |ss|
-    ss.source_files = 'Sources/Gcd/**'
+    ss.source_files = 'Sources/Thread/**'
   end
   
   s.subspec 'String' do |ss|
