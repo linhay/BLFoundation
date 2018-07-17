@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'BLFoundation'
-s.version          = '0.5.6.alpha'
+s.version          = '0.5.6'
 s.summary          = 'A set of useful categories for Foundation.'
 
 s.homepage = 'https://github.com/linhay/BLFoundation'
@@ -14,7 +14,7 @@ s.osx.deployment_target = '10.10'
 s.watchos.deployment_target = '2.0'
 
 s.public_header_files = ["Sources/BLFoundation.h"]
-s.source_files = ['Sources/*/**','Sources/**']
+s.source_files = ['Sources/*.h']
 
 s.subspec 'String' do |ss|
 ss.source_files = 'Sources/String/**'

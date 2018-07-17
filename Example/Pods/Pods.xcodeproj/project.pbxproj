@@ -25,6 +25,7 @@
 		A0D0CD949595A375A04A1B56036F6863 /* String+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44B27016FCF14B690C584AB5C978F0 /* String+format.swift */; };
 		B557B2659148605F0C71E93E7AC4B6BB /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C0A226CB86251AC0E44736D44B869 /* Character.swift */; };
 		CCA98BAA56034CC92EA1B76A47EE7D11 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC4C348D99B68AC9A9FE718AC3B925A /* Double.swift */; };
+		CDAB6CEB20FDC8D600780E0E /* Gcd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB6CEA20FDC8D600780E0E /* Gcd.swift */; };
 		D0B0EE4E75D00D8CDD98F6EF755C592C /* Pods-BLFoundation_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D3609E5CD218299E51B3CBBF85962E /* Pods-BLFoundation_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1A1023CE7642866C272F7CD03AE669E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		D2ADB91D9FBBACD0B478D7B55125D001 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4A5BC81E210B9C7D0815CD8F5326B /* Coder.swift */; };
@@ -46,10 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00FE76B752EF3474165AE13681340E23 /* Pods_BLFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLFoundation_Example.framework; path = "Pods-BLFoundation_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00FE76B752EF3474165AE13681340E23 /* Pods_BLFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		021A2D4103323A7BBDAFA48A9F421CDA /* BLFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BLFoundation.modulemap; sourceTree = "<group>"; };
 		097B929A4F9F81086EFA433D94426EDC /* BLFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLFoundation.h; path = Sources/BLFoundation.h; sourceTree = "<group>"; };
-		0A2B192881C5468275895E793E700FD1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0A2B192881C5468275895E793E700FD1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		18C1122837626C0AD6DBB8FC402102CE /* RunTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RunTime.swift; sourceTree = "<group>"; };
 		19064454A22624997D6FFC02E222572C /* Pods-BLFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1BFCA9BC1AFCCB43CF48C7FD64230EF6 /* Pods-BLFoundation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLFoundation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -69,9 +70,9 @@
 		78ADB9F08B035614E20118389F16AEEA /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		7F0D1959AA6FAEBCB1FD371B70200AEB /* String+operator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+operator.swift"; sourceTree = "<group>"; };
 		8E6550E625AEA6F5BE2253152F3A395E /* String+match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+match.swift"; sourceTree = "<group>"; };
-		934E7E5D33ED693F25B0F7EF83CB2AB9 /* BLFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BLFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		945B7498D6CF6511164C838E156568F8 /* BLFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BLFoundation.framework; path = BLFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		934E7E5D33ED693F25B0F7EF83CB2AB9 /* BLFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BLFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		945B7498D6CF6511164C838E156568F8 /* BLFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DF4701B24B3366DE137A82509DA625 /* Pods-BLFoundation_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BLFoundation_Example.modulemap"; sourceTree = "<group>"; };
 		9A0CBC8CEFB0B5A57B2E9209541E525C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D046E1D79E7875330232A19865BCF62 /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -79,11 +80,12 @@
 		A3968DE5A7FF6EFD485D91D019DE3E6A /* String+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		A3EAFECB3C040DFFF1E5BF469718D9A2 /* URL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		A775A57E757F3F07EA25E7FFE8686DEF /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		AA1B1B4D2A4CA643FABA85D62C229AB7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		AA1B1B4D2A4CA643FABA85D62C229AB7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AD44B27016FCF14B690C584AB5C978F0 /* String+format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+format.swift"; sourceTree = "<group>"; };
 		AFA24372E755810E57F01B760DE3DEBF /* BLFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BLFoundation.xcconfig; sourceTree = "<group>"; };
 		BBEDD88BC652ED06CF64CA75CB29806E /* String+substring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+substring.swift"; sourceTree = "<group>"; };
 		C87F583C349286060E9870394584E50E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDAB6CEA20FDC8D600780E0E /* Gcd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gcd.swift; sourceTree = "<group>"; };
 		E00C0A226CB86251AC0E44736D44B869 /* Character.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		ED4E12905C9A76F441C4C531C9F8BDCB /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		EDC4C348D99B68AC9A9FE718AC3B925A /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				097B929A4F9F81086EFA433D94426EDC /* BLFoundation.h */,
+				CDAB6CE920FDC8CA00780E0E /* Thread */,
 				61FF0E84D9AD9773E3A400E5A16FFC57 /* Data */,
 				05BE6677F46785A3C2723779215ECB4C /* Date */,
 				60E8538A9C70F337C866B9ABD942A29E /* Number */,
@@ -237,6 +240,15 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDAB6CE920FDC8CA00780E0E /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				CDAB6CEA20FDC8D600780E0E /* Gcd.swift */,
+			);
+			name = Thread;
+			path = Sources/Thread;
 			sourceTree = "<group>";
 		};
 		CECC9C95C7E12E8E7E1069CDF2E53CE9 /* Pod */ = {
@@ -399,6 +411,7 @@
 				139393BDA03AC7FA47C698C0CDCDD6D4 /* String+operator.swift in Sources */,
 				507A0E33DFDB66B911A38D52C499AA40 /* String+substring.swift in Sources */,
 				7CDD52874C65667DEA571B8B77F0C69E /* URL.swift in Sources */,
+				CDAB6CEB20FDC8D600780E0E /* Gcd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
