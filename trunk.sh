@@ -18,7 +18,9 @@ git push
 read -t 600 -p "版本内容[默认为${version}]:" diff
 if [ -z ${diff} ];then  
 diff=${version}
-fi 
+fi
+
+git tag -d ${version}
 git tag -a ${version} -m ${diff}
 git push origin ${version}
 pod trunk push ${file} --allow-warnings
