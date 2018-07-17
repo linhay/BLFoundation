@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.public_header_files = ["Sources/BLFoundation.h"]
   s.source_files = ['Sources/*.h']
   
-  s.subspec 'Gcd' do |ss|
+  s.subspec 'Thread' do |ss|
     ss.source_files = 'Sources/Gcd/**'
   end
   
