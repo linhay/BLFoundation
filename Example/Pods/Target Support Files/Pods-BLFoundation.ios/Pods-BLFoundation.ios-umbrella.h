@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_BLFoundation_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BLFoundation_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_BLFoundation_iosVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_BLFoundation_iosVersionString[];
 

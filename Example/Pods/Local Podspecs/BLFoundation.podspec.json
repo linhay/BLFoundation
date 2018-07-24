@@ -1,6 +1,6 @@
 {
   "name": "BLFoundation",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "summary": "A set of useful categories for Foundation.",
   "homepage": "https://github.com/linhay/BLFoundation",
   "license": {
@@ -12,8 +12,9 @@
   },
   "source": {
     "git": "https://github.com/linhay/BLFoundation.git",
-    "tag": "0.5.5"
+    "tag": "0.5.6"
   },
+  "requires_arc": true,
   "platforms": {
     "ios": "8.0",
     "tvos": "9.0",
@@ -24,10 +25,20 @@
     "Sources/BLFoundation.h"
   ],
   "source_files": [
-    "Sources/*/**",
-    "Sources/**"
+    "Sources/*.h"
   ],
   "subspecs": [
+    {
+      "name": "Device",
+      "source_files": "Source/*.swift",
+      "ios": {
+        "source_files": "Sources/Device/ios/*.swift"
+      }
+    },
+    {
+      "name": "Thread",
+      "source_files": "Sources/Thread/**"
+    },
     {
       "name": "String",
       "source_files": "Sources/String/**"

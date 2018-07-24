@@ -13,14 +13,16 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		76AFC20B71ABE81C18BC2A87 /* Pods_BLFoundation_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87179FF1E63D5C27D7EC66B /* Pods_BLFoundation_ios.framework */; };
 		CDBB0B2D2024595400AF47FC /* trunk.sh in Resources */ = {isa = PBXBuildFile; fileRef = CDBB0B2C2024595400AF47FC /* trunk.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15E6D62BF0867AEC0B4905C4 /* Pods_BLFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED78FC7E84380E6686B8424 /* Pods-BLFoundation.osx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation.osx.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation.osx/Pods-BLFoundation.osx.release.xcconfig"; sourceTree = "<group>"; };
 		5B2C2A3A8830A7520B8DD886 /* Pods-BLFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5F3C9621A5FD188BCBFFFD49 /* BLFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BLFoundation.podspec; path = ../BLFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		607FACD01AFB9204008FA782 /* BLFoundation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLFoundation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* BLFoundation.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLFoundation.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +31,12 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6713A2DB922AEA7974D114F6 /* Pods-BLFoundation.ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation.ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation.ios/Pods-BLFoundation.ios.release.xcconfig"; sourceTree = "<group>"; };
+		7DEDA52FE60BAE941646E7DB /* Pods_BLFoundation_osx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_osx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB25E501C5AB5A4D6CB35202 /* Pods-BLFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B0545B2895EA4C6BD2B29A65 /* Pods-BLFoundation.ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation.ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation.ios/Pods-BLFoundation.ios.debug.xcconfig"; sourceTree = "<group>"; };
+		B64480F364F6F35C60BACAAA /* Pods-BLFoundation.osx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation.osx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation.osx/Pods-BLFoundation.osx.debug.xcconfig"; sourceTree = "<group>"; };
+		B87179FF1E63D5C27D7EC66B /* Pods_BLFoundation_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C745768D604633EC353389D9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDBB0B2C2024595400AF47FC /* trunk.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = trunk.sh; path = ../trunk.sh; sourceTree = "<group>"; };
 		E877467F7530791DDA84F38F /* Pods_BLFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4355CC94E88BC0C615F15125 /* Pods_BLFoundation_Example.framework in Frameworks */,
+				76AFC20B71ABE81C18BC2A87 /* Pods_BLFoundation_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,8 @@
 			children = (
 				E877467F7530791DDA84F38F /* Pods_BLFoundation_Example.framework */,
 				15E6D62BF0867AEC0B4905C4 /* Pods_BLFoundation_Tests.framework */,
+				B87179FF1E63D5C27D7EC66B /* Pods_BLFoundation_ios.framework */,
+				7DEDA52FE60BAE941646E7DB /* Pods_BLFoundation_osx.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,7 +84,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* BLFoundation_Example.app */,
+				607FACD01AFB9204008FA782 /* BLFoundation.ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +146,10 @@
 				AB25E501C5AB5A4D6CB35202 /* Pods-BLFoundation_Example.release.xcconfig */,
 				F4EAE475C07B2ADEA047654C /* Pods-BLFoundation_Tests.debug.xcconfig */,
 				EEA9639DC38E5D4AA0133478 /* Pods-BLFoundation_Tests.release.xcconfig */,
+				B0545B2895EA4C6BD2B29A65 /* Pods-BLFoundation.ios.debug.xcconfig */,
+				6713A2DB922AEA7974D114F6 /* Pods-BLFoundation.ios.release.xcconfig */,
+				B64480F364F6F35C60BACAAA /* Pods-BLFoundation.osx.debug.xcconfig */,
+				3ED78FC7E84380E6686B8424 /* Pods-BLFoundation.osx.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -143,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* BLFoundation_Example */ = {
+		607FACCF1AFB9204008FA782 /* BLFoundation.ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BLFoundation_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BLFoundation.ios" */;
 			buildPhases = (
 				0AA876746921D239809B46EE /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -157,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = BLFoundation_Example;
+			name = BLFoundation.ios;
 			productName = BLFoundation;
-			productReference = 607FACD01AFB9204008FA782 /* BLFoundation_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* BLFoundation.ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +182,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -192,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* BLFoundation_Example */,
+				607FACCF1AFB9204008FA782 /* BLFoundation.ios */,
 			);
 		};
 /* End PBXProject section */
@@ -223,7 +237,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BLFoundation_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BLFoundation.ios-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -236,7 +250,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation.ios/Pods-BLFoundation.ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BLFoundation/BLFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -245,7 +259,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation.ios/Pods-BLFoundation.ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -389,14 +403,14 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B2C2A3A8830A7520B8DD886 /* Pods-BLFoundation_Example.debug.xcconfig */;
+			baseConfigurationReference = B0545B2895EA4C6BD2B29A65 /* Pods-BLFoundation.ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8H2PX2432F;
 				INFOPLIST_FILE = BLFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.BLFoundation.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -404,14 +418,14 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB25E501C5AB5A4D6CB35202 /* Pods-BLFoundation_Example.release.xcconfig */;
+			baseConfigurationReference = 6713A2DB922AEA7974D114F6 /* Pods-BLFoundation.ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8H2PX2432F;
 				INFOPLIST_FILE = BLFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.BLFoundation.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -429,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BLFoundation_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BLFoundation.ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,

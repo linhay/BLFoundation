@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.author   = { 'linhay' => 'is.linhay@outlook.com' }
   s.source   = { :git => 'https://github.com/linhay/BLFoundation.git', :tag => s.version.to_s }
   
+  s.requires_arc = true
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
@@ -15,6 +16,11 @@ Pod::Spec.new do |s|
   
   s.public_header_files = ["Sources/BLFoundation.h"]
   s.source_files = ['Sources/*.h']
+  
+  s.subspec 'Device' do |ss|
+    ss.source_files            = 'Source/*.swift'
+    ss.ios.source_files   = 'Sources/Device/ios/*.swift'
+  end
   
   s.subspec 'Thread' do |ss|
     ss.source_files = 'Sources/Thread/**'
