@@ -1,6 +1,6 @@
 use_frameworks!
 
-targets = ['BLFoundation.ios']
+targets = ['BLFoundation_Example']
 # 循环
 targets.each do |t|
   target t do
