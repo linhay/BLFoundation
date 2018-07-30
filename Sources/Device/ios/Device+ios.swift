@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class Device {
+public extension Device {
   /// 判断设备类型
   ///
   /// - Parameter type: 设备类型
