@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		76AFC20B71ABE81C18BC2A87 /* Pods_BLFoundation_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87179FF1E63D5C27D7EC66B /* Pods_BLFoundation_ios.framework */; };
+		CD06C857210F03B700F8F39C /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = CD06C856210F03B700F8F39C /* .travis.yml */; };
 		CDBB0B2D2024595400AF47FC /* trunk.sh in Resources */ = {isa = PBXBuildFile; fileRef = CDBB0B2C2024595400AF47FC /* trunk.sh */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		B64480F364F6F35C60BACAAA /* Pods-BLFoundation.osx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation.osx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation.osx/Pods-BLFoundation.osx.debug.xcconfig"; sourceTree = "<group>"; };
 		B87179FF1E63D5C27D7EC66B /* Pods_BLFoundation_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C745768D604633EC353389D9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CD06C856210F03B700F8F39C /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		CDBB0B2C2024595400AF47FC /* trunk.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = trunk.sh; path = ../trunk.sh; sourceTree = "<group>"; };
 		E877467F7530791DDA84F38F /* Pods_BLFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA9639DC38E5D4AA0133478 /* Pods-BLFoundation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Tests/Pods-BLFoundation_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				CD06C856210F03B700F8F39C /* .travis.yml */,
 				5F3C9621A5FD188BCBFFFD49 /* BLFoundation.podspec */,
 				CDBB0B2C2024595400AF47FC /* trunk.sh */,
 				C745768D604633EC353389D9 /* README.md */,
@@ -216,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD06C857210F03B700F8F39C /* .travis.yml in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				CDBB0B2D2024595400AF47FC /* trunk.sh in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
