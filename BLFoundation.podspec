@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.source_files = ['Sources/*.h']
   
   s.subspec 'Device' do |ss|
-    ss.source_files            = 'Source/*.swift'
     ss.ios.source_files   = 'Sources/Device/ios/*.swift'
   end
   
