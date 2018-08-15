@@ -1,13 +1,11 @@
 use_frameworks!
 
-targets = ['BLFoundation_Example']
-# 循环
-targets.each do |t|
-  target t do
-    use_frameworks!
+target 'BLFoundation_Example' do
+  pod 'BLFoundation', :path => '../'
 
-    pod 'BLFoundation', :path => '../'
+  target 'BLFoundation_Tests' do
+    inherit! :search_paths
 
+    
   end
-  
 end

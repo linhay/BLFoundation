@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  BLFoundation
 //
-//  Created by is.linhay@outlook.com on 09/15/2017.
-//  Copyright (c) 2017 is.linhay@outlook.com. All rights reserved.
+//  Created by 158179948@qq.com on 08/15/2018.
+//  Copyright (c) 2018 158179948@qq.com. All rights reserved.
 //
 
 import UIKit

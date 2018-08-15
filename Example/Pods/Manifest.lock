@@ -1,21 +1,23 @@
 PODS:
-  - BLFoundation (0.5.7):
-    - BLFoundation/Data (= 0.5.7)
-    - BLFoundation/Date (= 0.5.7)
-    - BLFoundation/Device (= 0.5.7)
-    - BLFoundation/Number (= 0.5.7)
-    - BLFoundation/String (= 0.5.7)
-    - BLFoundation/Thread (= 0.5.7)
-    - BLFoundation/Tools (= 0.5.7)
-    - BLFoundation/URL (= 0.5.7)
-  - BLFoundation/Data (0.5.7)
-  - BLFoundation/Date (0.5.7)
-  - BLFoundation/Device (0.5.7)
-  - BLFoundation/Number (0.5.7)
-  - BLFoundation/String (0.5.7)
-  - BLFoundation/Thread (0.5.7)
-  - BLFoundation/Tools (0.5.7)
-  - BLFoundation/URL (0.5.7)
+  - BLFoundation (0.5.8):
+    - BLFoundation/Data (= 0.5.8)
+    - BLFoundation/Date (= 0.5.8)
+    - BLFoundation/Device (= 0.5.8)
+    - BLFoundation/EventBus (= 0.5.8)
+    - BLFoundation/Number (= 0.5.8)
+    - BLFoundation/String (= 0.5.8)
+    - BLFoundation/Thread (= 0.5.8)
+    - BLFoundation/Tools (= 0.5.8)
+    - BLFoundation/URL (= 0.5.8)
+  - BLFoundation/Data (0.5.8)
+  - BLFoundation/Date (0.5.8)
+  - BLFoundation/Device (0.5.8)
+  - BLFoundation/EventBus (0.5.8)
+  - BLFoundation/Number (0.5.8)
+  - BLFoundation/String (0.5.8)
+  - BLFoundation/Thread (0.5.8)
+  - BLFoundation/Tools (0.5.8)
+  - BLFoundation/URL (0.5.8)
 
 DEPENDENCIES:
   - BLFoundation (from `../`)
@@ -25,8 +27,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLFoundation: 0b5b085becac73fdfebe8b0e6935ce791c7c3d36
+  BLFoundation: fafec38a5b4cdbaa0260f935ae313289a2c97aba
 
-PODFILE CHECKSUM: e56bcbd22f537cfacb26dd39ec423405bc117cca
+PODFILE CHECKSUM: 1ec346d374e7039f2f28f82cb45b86055c93823c
 
 COCOAPODS: 1.5.3

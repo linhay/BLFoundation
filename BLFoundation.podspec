@@ -8,6 +8,8 @@ Pod::Spec.new do |s|
   s.author   = { 'linhay' => 'is.linhay@outlook.com' }
   s.source   = { :git => 'https://github.com/linhay/BLFoundation.git', :tag => s.version.to_s }
   
+  s.swift_version = '4.0'
+  
   s.requires_arc = true
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
@@ -24,6 +26,10 @@ Pod::Spec.new do |s|
   
   s.subspec 'Thread' do |ss|
     ss.source_files = 'Sources/Thread/**'
+  end
+  
+  s.subspec 'EventBus' do |ss|
+    ss.source_files = 'Sources/EventBus/**'
   end
   
   s.subspec 'String' do |ss|
