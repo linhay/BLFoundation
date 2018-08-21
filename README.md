@@ -21,12 +21,19 @@ CocoaPod
 ```
 
 pod 'BLFoundation'
+
 or pod 'BLFoundation/Data'
+
 or pod 'BLFoundation/Date'
+
 or pod 'BLFoundation/Number'
+
 or pod 'BLFoundation/Data'
+
 or pod 'BLFoundation/Tools'
+
 or pod 'BLFoundation/URL'
+
 or pod 'BLFoundation/EventBus'
 
 ```
