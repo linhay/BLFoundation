@@ -51,8 +51,8 @@ public extension Device {
     return _version
   }
   
-  static var _type = Type.unknown
-  static var _version = Version.unknown
+  private static var _type = Type.unknown
+  private static var _version = Version.unknown
 }
 
 
