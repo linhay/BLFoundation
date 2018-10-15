@@ -86,6 +86,9 @@ extension Device {
     case "iPhone10,1", "iPhone10,4":            _type = .iPhone; _version = .iPhone8
     case "iPhone10,2", "iPhone10,5":            _type = .iPhone; _version = .iPhone8Plus
     case "iPhone10,3", "iPhone10,6":            _type = .iPhone; _version = .iPhoneX
+    case "iPhone11,2":                          _type = .iPhone; _version = .iPhoneXS
+    case "iPhone11,4", "iPhone11,6":            _type = .iPhone; _version = .iPhoneXSMax
+    case "iPhone11,8":                           _type = .iPhone; _version = .iPhoneXR
       /*** iPad ***/
     case "iPad1,1":                                 _type = .iPad; _version = .iPad1
     case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":_type = .iPad; _version = .iPad2
@@ -144,6 +147,9 @@ extension Device {
     case iPhone8
     case iPhone8Plus
     case iPhoneX
+    case iPhoneXS
+    case iPhoneXSMax
+    case iPhoneXR
     /*** iPad ***/
     case iPad1
     case iPad2
