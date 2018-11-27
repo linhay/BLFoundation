@@ -27,7 +27,7 @@ public extension String{
 
   /// 提取: Emojis
  public var emojis: [String] {
-    let elements = unicodeScalars.flatMap { (scalar) -> String? in
+  let elements = unicodeScalars.compactMap { (scalar) -> String? in
       switch scalar.value {
       case 0x3030,
            0x00AE,

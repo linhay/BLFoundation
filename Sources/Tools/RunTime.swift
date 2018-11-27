@@ -23,7 +23,7 @@
 import Foundation
 
 public class RunTime {
-
+  
   /// 交换方法
   ///
   /// - Parameters:
@@ -63,7 +63,7 @@ public class RunTime {
       method_exchangeImplementations(select1Method!, select2Method!)
     }
   }
-
+  
   /// 获取方法列表
   ///
   /// - Parameter classType: 所属类型
@@ -80,7 +80,7 @@ public class RunTime {
     free(methods)
     return list
   }
-
+  
   /// 获取属性列表
   ///
   /// - Parameter classType: 所属类型
@@ -97,7 +97,7 @@ public class RunTime {
     free(properties)
     return list
   }
-
+  
   /// 成员变量列表
   ///
   /// - Parameter classType: 类型
@@ -112,6 +112,21 @@ public class RunTime {
       }
     }
     free(ivars)
+    return list
+  }
+  
+  /// 获取已注册类列表
+  ///
+  /// - Returns: 已注册类列表
+  static func classList() -> [AnyClass] {
+    let typeCount = Int(objc_getClassList(nil, 0))
+    let types = UnsafeMutablePointer<AnyClass?>.allocate(capacity: typeCount)
+    let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
+    objc_getClassList(autoreleasingTypes, Int32(typeCount))
+    let list = (0..<typeCount).compactMap { (index) -> AnyClass? in
+      return types[index]
+    }
+    types.deallocate()
     return list
   }
   

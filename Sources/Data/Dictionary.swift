@@ -27,7 +27,7 @@ public extension Dictionary {
   ///
   /// - Parameter keys: 下标集合
   public subscript(keys: [Key]) -> [Value] {
-    let values = keys.flatMap { (key) -> Value? in
+    let values = keys.compactMap { (key) -> Value? in
       return self[key]
     }
     return values
