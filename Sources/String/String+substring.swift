@@ -47,42 +47,100 @@ extension String {
 public extension String {
   /// 获取指定位置字符
   ///
+  ///     let str = "1234567890"
+  ///     print(str[0])
+  ///     // Print 1
+  ///     print(str[20])
+  ///     // Print nil
+  ///     print(str[-10])
+  ///     // Print nil
+  ///
   /// - Parameter index: 指定位置
-  subscript(index: Int) -> String {
-    if index < 0 || index >= count { return "" }
+  subscript(_ index: Int) -> String? {
+    if index < 0 || index >= count { return nil }
     let index = self.index(startIndex, offsetBy: String.IndexDistance(index))
     return String(self[index])
   }
-
-  /// 截取: 区间内的子串
+  
+  /// 安全截取: 闭区间内的子串
   ///
-  /// - Parameter closedRange: 区间
-  subscript(integerRange: Range<Int>) -> String {
+  ///     let str = "1234567890"
+  ///     print(str[3...6])
+  ///     // Print "4567"
+  ///     print(str[0...5])
+  ///     // Print "123456"
+  ///     print(str[-10...100])
+  ///     // Print "1234567890"
+  ///
+  /// - Parameter range: 闭区间
+  subscript(_ range: CountableClosedRange<Int>) -> String {
     if isEmpty { return "" }
-    var range: (start: Int, end: Int) = (integerRange.lowerBound,integerRange.upperBound)
+    var range: (start: Int, end: Int) = (range.lowerBound,range.upperBound)
     if range.start < 0 { range.start = 0 }
-    if range.end >= count { range.end = count }
+    if range.end >= count { range.end = count - 1 }
     if range.start > range.end { return "" }
     if range.start == range.end { return "" }
     let start = index(startIndex, offsetBy: range.start)
     let end = index(startIndex, offsetBy: range.end)
-    return String(self[start..<end])
-  }
-
-  /// 截取: 区间内的子串
-  ///
-  /// - Parameter closedRange: 区间
-  subscript(closedRange: CountableClosedRange<Int>) -> String {
-    if isEmpty { return "" }
-    var range: (start: Int, end: Int) = (closedRange.lowerBound,closedRange.upperBound)
-    if range.start < 0 { range.start = 0 }
-    if range.end >= count { range.end = count - 1 }
-    if range.start > range.end { return "" }
-    if range.start == range.end { return self[range.start] }
-    let start = index(startIndex, offsetBy: range.start)
-    let end = index(startIndex, offsetBy: range.end)
     return String(self[start...end])
   }
+
+  /// 安全截取: 闭区间内的子串
+  ///
+  ///     let str = "1234567890"
+  ///     print(str[0..<5])
+  ///     // Print "12345"
+  ///     print(str[0...20])
+  ///     // Print "1234567890"
+  ///     print(str[-10...0])
+  ///     // Print ""
+  ///
+  /// - Parameter range: 区间
+  subscript(_ range: CountableRange<Int>) -> String {
+    return String(self[range.lowerBound...(range.upperBound - 1)])
+  }
+
+  /// 安全截取: 闭区间内的子串
+  ///
+  ///     let str = "1234567890"
+  ///     print(str[5...])
+  ///     // Print "67890"
+  ///     print(str[20...])
+  ///     // Print ""
+  ///
+  /// - Parameter range: 区间
+  subscript(_ range: CountablePartialRangeFrom<Int>) -> String {
+    return String(self[range.lowerBound...(self.count - 1)])
+  }
+  
+  /// 安全截取: 闭区间内的子串
+  ///
+  ///     let str = "1234567890"
+  ///     print(str[..<5])
+  ///     // Print "12345"
+  ///     print(str[..<20])
+  ///     // Print "1234567890"
+  ///
+  /// - Parameter range: 区间
+  subscript(_ range: PartialRangeUpTo<Int>) -> String {
+    return String(self[0..<range.upperBound])
+  }
+  
+  /// 安全截取: 闭区间内的子串
+  ///
+  ///     let str = "1234567890"
+  ///     print(str[...5])
+  ///     // Print "123456"
+  ///     print(str[5...])
+  ///     // Print "67890"
+  ///     print(str[-10...])
+  ///     // Print "1234567890"
+  ///
+  /// - Parameter range: 区间
+  subscript(_ range: PartialRangeThrough<Int>) -> String {
+    return String(self[0...range.upperBound])
+  }
+  
 }
 
 // MARK: - 截取
