@@ -118,7 +118,7 @@ public class RunTime {
   /// 获取已注册类列表
   ///
   /// - Returns: 已注册类列表
-  static func classList() -> [AnyClass] {
+  public static func classList() -> [AnyClass] {
     let typeCount = Int(objc_getClassList(nil, 0))
     let types = UnsafeMutablePointer<AnyClass?>.allocate(capacity: typeCount)
     let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
