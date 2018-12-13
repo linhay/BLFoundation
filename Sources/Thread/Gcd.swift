@@ -91,6 +91,7 @@ public class Gcd {
   ///   - keep: 持续时间, 小于0则会一直执行
   ///   - leeway: 精度, 默认 0.1
   ///   - event: 定时事件
+  @discardableResult
   public class func `repeat`(interval: Double, keep: Double = 0.0, leeway: Double = 0.1, event: @escaping (()->())) -> DispatchSourceTimer {
     let intervalTime = DispatchTimeInterval.milliseconds(Int(interval * 1000))
     let leewayTime = DispatchTimeInterval.milliseconds(Int(leeway * 1000))
