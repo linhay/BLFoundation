@@ -1,6 +1,6 @@
 {
   "name": "BLFoundation",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "summary": "A set of useful categories for Foundation.",
   "homepage": "https://github.com/linhay/BLFoundation",
   "license": {
@@ -12,9 +12,9 @@
   },
   "source": {
     "git": "https://github.com/linhay/BLFoundation.git",
-    "tag": "0.7.0"
+    "tag": "0.8.0"
   },
-  "swift_version": "4.0",
+  "swift_version": "4.2",
   "requires_arc": true,
   "platforms": {
     "ios": "8.0",
@@ -41,20 +41,20 @@
       "source_files": "Sources/Thread/**"
     },
     {
-      "name": "EventBus",
-      "source_files": "Sources/EventBus/**"
+      "name": "Custom",
+      "source_files": "Sources/Custom/*/**"
     },
     {
       "name": "String",
       "source_files": "Sources/String/**"
     },
     {
-      "name": "Date",
-      "source_files": "Sources/Date/**"
+      "name": "Stdlib",
+      "source_files": "Sources/Stdlib/**"
     },
     {
-      "name": "Number",
-      "source_files": "Sources/Number/**"
+      "name": "Date",
+      "source_files": "Sources/Date/**"
     },
     {
       "name": "URL",

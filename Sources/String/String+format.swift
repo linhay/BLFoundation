@@ -35,8 +35,8 @@ public extension String {
   var bool: Bool? {
     if let num = number { return num.boolValue }
     switch self.lowercased() {
-    case "true","yes": return true
-    case "false","no": return false
+    case "1","true","yes": return true
+    case "0","false","no": return false
     default: return nil
     }
   }
@@ -58,41 +58,6 @@ public extension String {
       }
     }
     return nil
-  }
-
-  
-}
-
-
-// MARK: - JSON
-public extension String{
-
-  /// JSON to dictionary
-  ///
-  /// - Returns: dictionary
-  func dictionary<K: Hashable,V: Any>() -> [K:V] {
-    if let data = data(using: .utf8) {
-      do {
-        return try JSONSerialization.jsonObject(with: data, options: []) as? [K:V] ?? [:]
-      } catch {
-        print(error.localizedDescription)
-      }
-    }
-    return [:]
-  }
-
-  /// JSON to array
-  ///
-  /// - Returns: array
-  func array<T: Any>() -> [T] {
-    if let data = data(using: .utf8) {
-      do {
-        return try JSONSerialization.jsonObject(with: data, options: []) as? [T] ?? []
-      } catch {
-        print(error.localizedDescription)
-      }
-    }
-    return []
   }
 
 }

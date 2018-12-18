@@ -22,27 +22,6 @@
 
 import Foundation
 
-// MARK: - 索引
-extension String {
-  /// 获取指定字符串第一个字符在母串中的索引
-  ///
-  /// - Parameter str: 指定字符串
-  /// - Returns: 索引
-  func index(first str: String) -> String.Index? {
-    let range = self.range(of: str)
-    return range?.lowerBound
-  }
-
-  /// 获取指定字符串最后一个字符在母串中的索引
-  ///
-  /// - Parameter str: 指定字符串
-  /// - Returns: 索引
-  func index(last str: String) -> String.Index? {
-    let range = self.range(of: str)
-    return range?.upperBound
-  }
-}
-
 // MARK: - 下标/区间截取
 public extension String {
   /// 获取指定位置字符
@@ -151,8 +130,15 @@ public extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(before str: String) -> String {
-    guard let index = self.index(first: str) else { return "" }
-    return String(self[..<index])
+    guard let firstValue = str.first?.string, self.isEmpty else { return "" }
+    
+    for index in 0..<count {
+      guard let value = self[index], firstValue == value else { continue }
+      if index + str.count >= count { return "" }
+      if self[index...index + str.count] == str { return self[..<index] }
+    }
+
+    return ""
   }
 
   /// 截取: 获取指定字符串后的字符
@@ -160,8 +146,14 @@ public extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(after str: String) -> String {
-    guard let index = self.index(last: str) else { return "" }
-    let str = String(self[index...])
-    return str
+    guard let firstValue = str.first?.string, self.isEmpty else { return "" }
+    
+    for index in 0..<count {
+      guard let value = self[index], firstValue == value else { continue }
+      if index + str.count >= count { return "" }
+      if self[index...index + str.count] == str { return self[(index + str.count + 1)...] }
+    }
+    
+    return ""
   }
 }
