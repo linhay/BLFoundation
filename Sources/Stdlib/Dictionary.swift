@@ -21,8 +21,28 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 import Foundation
 
-public extension Dictionary {
 
+// MARK: - Dictionary 重载操作符
+extension Dictionary {
+  
+  /// 两个字典相加
+  ///
+  /// - Parameters:
+  ///   - lhs: 左侧字典
+  ///   - rhs: 右侧字典
+  /// - Returns: 返回新的字典
+  static func +(lhs: Dictionary,rhs: Dictionary) -> Dictionary {
+    var temp = Dictionary()
+    lhs.forEach { temp.updateValue($0.value, forKey: $0.key) }
+    rhs.forEach { temp.updateValue($0.value, forKey: $0.key) }
+    return temp
+  }
+  
+}
+
+// MARK: - Dictionary subscript函数
+public extension Dictionary {
+  
   /// 根据下标集合获取元素集合
   ///
   /// - Parameter keys: 下标集合
@@ -32,21 +52,23 @@ public extension Dictionary {
     }
     return values
   }
-
+  
 }
 
+// MARK: - Dictionary 属性
 public extension Dictionary {
   /// 从字典中随机取值
   ///
   /// - Returns: 值
-  public var random: Value? {
-    get{
-      if isEmpty { return nil }
-      let index: Int = Int(arc4random_uniform(UInt32(self.count)))
-      return Array(self.values)[index]
-    }
+  public var random: (key: Key,value: Value)? {
+    guard let key = keys.randomElement(), let value = self[key] else { return nil }
+    return (key: key,value: value)
   }
+  
+}
 
+// MARK: - 函数
+public extension Dictionary {
   /// 检查是否有值
   ///
   /// - Parameter key: key名
@@ -54,26 +76,12 @@ public extension Dictionary {
   public func has(key: Key) -> Bool {
     return index(forKey: key) != nil
   }
-
-  /// 更新字典
-  ///
-  /// - Parameter dicts: 单个/多个字典
-  /// - Returns: 新字典
-  public mutating func update(dicts: Dictionary...) {
-    dicts.forEach { (dict) in
-      dict.forEach({ (item) in
-        self.updateValue(item.value, forKey: item.key)
-      })
-    }
-  }
-
+  
   /// 格式化为Json
   ///
   /// - Returns: Json字符串
   public func formatJSON(prettify: Bool = false) -> String {
-    guard JSONSerialization.isValidJSONObject(self) else {
-      return "{}"
-    }
+    guard JSONSerialization.isValidJSONObject(self) else { return "{}" }
     let options = prettify ? JSONSerialization.WritingOptions.prettyPrinted: JSONSerialization.WritingOptions()
     do {
       let jsonData = try JSONSerialization.data(withJSONObject: self, options: options)
@@ -82,5 +90,5 @@ public extension Dictionary {
       return "{}"
     }
   }
-
+  
 }
