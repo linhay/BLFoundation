@@ -46,11 +46,16 @@ public extension Dictionary {
   /// 根据下标集合获取元素集合
   ///
   /// - Parameter keys: 下标集合
-  public subscript(keys: [Key]) -> [Value] {
-    let values = keys.compactMap { (key) -> Value? in
-      return self[key]
-    }
-    return values
+  public subscript(_ keys: [Key]) -> [Value] {
+    return keys.compactMap {  self[$0] }
+  }
+  
+  
+  /// 根据下标集合获取元素集合
+  ///
+  /// - Parameter keys: 下标集合
+  public subscript(_ keys: Key...) -> [Value] {
+    return keys.compactMap {  self[$0] }
   }
   
 }
