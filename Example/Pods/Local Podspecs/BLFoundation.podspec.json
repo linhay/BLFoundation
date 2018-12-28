@@ -30,6 +30,14 @@
   ],
   "subspecs": [
     {
+      "name": "Coder",
+      "source_files": "Sources/Coder/*.swift"
+    },
+    {
+      "name": "NSObject",
+      "source_files": "Sources/NSObject/*.swift"
+    },
+    {
       "name": "Device",
       "source_files": "Sources/Device/*.swift",
       "ios": {

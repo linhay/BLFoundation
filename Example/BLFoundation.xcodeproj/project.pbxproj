@@ -285,7 +285,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BLFoundation/BLFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -294,7 +294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AED827312F95E92205CB1C60 /* [CP] Check Pods Manifest.lock */ = {

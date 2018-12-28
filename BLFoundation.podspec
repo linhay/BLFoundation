@@ -18,6 +18,14 @@ Pod::Spec.new do |s|
   
   s.public_header_files = ["Sources/BLFoundation.h"]
   s.source_files = ['Sources/*.h']
+
+  s.subspec 'Coder' do |ss|
+    ss.source_files   = 'Sources/Coder/*.swift'
+  end
+  
+  s.subspec 'NSObject' do |ss|
+    ss.source_files   = 'Sources/NSObject/*.swift'
+  end
   
   s.subspec 'Device' do |ss|
     ss.source_files   = 'Sources/Device/*.swift'

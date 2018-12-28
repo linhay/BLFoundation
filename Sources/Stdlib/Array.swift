@@ -22,6 +22,28 @@
 
 import Foundation
 
+// MARK: - Array about remove
+extension Array where Element: Equatable {
+  
+  mutating func removeFirst(with object: Element) {
+    if let index = firstIndex(of: object) {
+      remove(at: index)
+    }
+  }
+  
+  mutating func removeLast(with object: Element) {
+    if let index = lastIndex(of: object) {
+      remove(at: index)
+    }
+  }
+  
+  mutating func removeAll(with object: Element) {
+    self = filter{ $0 != object }
+  }
+  
+}
+
+
 public extension Array {
   
   /// 打乱数组
