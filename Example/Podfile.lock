@@ -8,7 +8,6 @@ PODS:
     - BLFoundation/NSObject (= 0.8.0)
     - BLFoundation/Stdlib (= 0.8.0)
     - BLFoundation/String (= 0.8.0)
-    - BLFoundation/Thread (= 0.8.0)
     - BLFoundation/Tools (= 0.8.0)
     - BLFoundation/URL (= 0.8.0)
   - BLFoundation/Coder (0.8.0)
@@ -19,7 +18,6 @@ PODS:
   - BLFoundation/NSObject (0.8.0)
   - BLFoundation/Stdlib (0.8.0)
   - BLFoundation/String (0.8.0)
-  - BLFoundation/Thread (0.8.0)
   - BLFoundation/Tools (0.8.0)
   - BLFoundation/URL (0.8.0)
 
@@ -31,7 +29,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLFoundation: 568da410efb53eaa56cee7ff8e6e3f9318f35bc6
+  BLFoundation: cd4635bca66e1289f84e8a5fd5c2beb67e6489c6
 
 PODFILE CHECKSUM: 1ec346d374e7039f2f28f82cb45b86055c93823c
 

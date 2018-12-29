@@ -59,5 +59,11 @@ public extension String {
     }
     return nil
   }
+  
+  /// get json
+  var jsonObject: Any? {
+    guard let data = data(using: .utf8) else { return nil }
+    return try? JSONSerialization.jsonObject(with: data, options: [.allowFragments])
+  }
 
 }

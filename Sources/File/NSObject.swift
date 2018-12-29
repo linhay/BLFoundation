@@ -19,14 +19,27 @@
 //  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-
 import Foundation
 
-public extension Data {
+public extension NSObject {
   
-  /// get json
-  var jsonObject: Any? {
-    return try? JSONSerialization.jsonObject(with: self, options: [.allowFragments])
+  fileprivate struct NSObjectDataKey {
+    static let customKeys = UnsafeRawPointer(bitPattern:"com.BLFoundation.customKeys".hashValue)!
+  }
+  
+  /// 存放自定义key-value
+  public var customKeys: [AnyHashable: Any] {
+    get {
+      if let value = (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any]) {
+        return value
+      }else{
+        objc_setAssociatedObject(self,NSObjectDataKey.customKeys,[:],.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        return (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any])!
+      }
+    }
+    set {
+      objc_setAssociatedObject(self,NSObjectDataKey.customKeys,newValue,.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
   }
   
 }

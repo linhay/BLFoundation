@@ -126,6 +126,7 @@ public class RunTime {
     let list = (0..<typeCount).compactMap { (index) -> AnyClass? in
       return types[index]
     }
+  
     types.deinitialize(count: typeCount)
     types.deallocate()
     return list
