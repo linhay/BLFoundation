@@ -1,18 +1,18 @@
 {
   "name": "BLFoundation",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "summary": "A set of useful categories for Foundation.",
-  "authors": {
-    "linhay": "is.linhay@outlook.com"
-  },
   "homepage": "https://github.com/linhay/BLFoundation",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
+  "authors": {
+    "linhay": "is.linhay@outlook.com"
+  },
   "source": {
     "git": "https://github.com/linhay/BLFoundation.git",
-    "tag": "0.8.0"
+    "tag": "0.8.1"
   },
   "swift_version": "4.2",
   "requires_arc": true,
@@ -38,10 +38,6 @@
       "source_files": "Sources/NSObject/*.swift"
     },
     {
-      "name": "Device",
-      "source_files": "Sources/Device/*.swift"
-    },
-    {
       "name": "String",
       "source_files": "Sources/String/*.swift"
     },
@@ -64,6 +60,13 @@
     {
       "name": "Tools",
       "source_files": "Sources/Tools/*.swift"
+    },
+    {
+      "name": "Device",
+      "source_files": "Sources/Device/*.swift",
+      "ios": {
+        "source_files": "Sources/Device/ios/*.swift"
+      }
     },
     {
       "name": "Custom",

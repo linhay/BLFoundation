@@ -15,6 +15,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		CD86F56C21D76C320042296E /* trunk.sh in Resources */ = {isa = PBXBuildFile; fileRef = CD86F56B21D76C320042296E /* trunk.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		9C9025B5EBA7D30B4BF16ACE /* Pods-BLFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B77D2CBED5386F5B49EA1D6E /* Pods-BLFoundation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Tests/Pods-BLFoundation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C02FC4374EED705DA3910D60 /* Pods-BLFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CD86F56B21D76C320042296E /* trunk.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = trunk.sh; path = ../trunk.sh; sourceTree = "<group>"; };
 		F99CC0C0D0C10B39741EE42C /* Pods_BLFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				CD86F56B21D76C320042296E /* trunk.sh */,
 				7EF23C6963B7250CCD2147C5 /* BLFoundation.podspec */,
 				9015DD34B5099D75AE1B7076 /* README.md */,
 				0DBFF2241A3BC1FF64A68204 /* LICENSE */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				CD86F56C21D76C320042296E /* trunk.sh in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
