@@ -20,12 +20,17 @@ Pod::Spec.new do |s|
   s.public_header_files = ['Sources/BLFoundation.h']
   s.source_files = ['Sources/*.h']
 
-  list = ['Coder', 'NSObject', 'Device', 'String', 'Stdlib', 'Date', 'URL', 'Data', 'Tools']
+  list = ['Coder', 'NSObject', 'String', 'Stdlib', 'Date', 'URL', 'Data', 'Tools']
   
   for name in list
     s.subspec name do |ss|
       ss.source_files = 'Sources/' + name + '/*.swift'
     end
+  end
+  
+  s.subspec 'Device' do |ss|
+    ss.source_files   = 'Sources/Device/*.swift'
+    ss.ios.source_files   = 'Sources/Device/ios/*.swift'
   end
   
   s.subspec 'Custom' do |ss|
