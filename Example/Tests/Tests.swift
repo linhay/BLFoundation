@@ -65,6 +65,27 @@ class Tests: XCTestCase {
     print(Device.version)
   }
   
+  func testArray() {
+    let array = [1,2,3,4,5,6,7,8,9,0]
+    XCTAssert(array.value(at: 5) == .some(6))
+    XCTAssert(array.value(at:20) == nil)
+    XCTAssert(array.value(at:-20) == nil)
+    XCTAssert(array.value(at:0) == .some(1))
+    XCTAssert(array.value(at:9) == .some(0))
+    
+    XCTAssert(array.slice(0...5) == [1,2,3,4,5,6])
+    XCTAssert(array.slice(0..<5) == [1,2,3,4,5])
+    XCTAssert(array.slice(..<5) == [1,2,3,4,5])
+    XCTAssert(array.slice(5...) == [6,7,8,9,0])
+    XCTAssert(array.slice(...5) == [1,2,3,4,5,6])
+    
+    XCTAssert(array.slice(-10...(-5)) == [])
+    XCTAssert(array.slice(-10...1000) == array)
+    XCTAssert(array.slice(3...6) == [4,5,6,7])
+    
+    XCTAssert(array.slice(-10..<100) == array)
+    XCTAssert(array.slice(3..<6) == [4,5,6])
+  }
   
   func testString() {
     let str = "1234567890"

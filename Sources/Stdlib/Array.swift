@@ -22,8 +22,62 @@
 
 import Foundation
 
+// MARK: - 下标/区间截取
+extension Array {
+  
+  
+  /// 安全截取: 闭区间内的子串
+  ///
+  /// - Parameter range: 闭区间
+  public func slice(_ range: CountableClosedRange<Int>) -> Array<Element> {
+    if isEmpty { return self }
+    var range: (start: Int, end: Int) = (range.lowerBound,range.upperBound)
+    if range.start < 0 { range.start = 0 }
+    if range.end >= count { range.end = count - 1 }
+    if range.start > range.end { return [] }
+    if range.start == range.end { return [] }
+    let start = index(startIndex, offsetBy: range.start)
+    let end = index(startIndex, offsetBy: range.end)
+    return Array(self[start...end])
+  }
+  
+  /// 安全截取: 闭区间内的子串
+  ///
+  /// - Parameter range: 区间
+  public func slice(_ range: CountableRange<Int>) -> Array<Element> {
+    let ran: CountableClosedRange<Int> = range.lowerBound...(range.upperBound - 1)
+    return self.slice(ran)
+  }
+  
+  /// 安全截取: 闭区间内的子串
+  ///
+  /// - Parameter range: 区间
+  public func slice(_ range: CountablePartialRangeFrom<Int>) -> Array<Element> {
+    let ran: CountableClosedRange<Int> = range.lowerBound...(self.count - 1)
+    return self.slice(ran)
+  }
+  
+  /// 安全截取: 闭区间内的子串
+  ///
+  /// - Parameter range: 区间
+  public func slice(_ range: PartialRangeUpTo<Int>) -> Array<Element> {
+    let ran: CountableClosedRange<Int> = 0...(range.upperBound - 1)
+    return self.slice(ran)
+  }
+  
+  /// 安全截取: 闭区间内的子串
+  ///
+  /// - Parameter range: 区间
+  public func slice(_ range: PartialRangeThrough<Int>) -> Array<Element> {
+    let ran: CountableClosedRange<Int> = 0...range.upperBound
+    return self.slice(ran)
+  }
+  
+}
+
 // MARK: - Array about remove
 extension Array where Element: Equatable {
+  
   
   mutating func removeFirst(with object: Element) {
     if let index = firstIndex(of: object) {

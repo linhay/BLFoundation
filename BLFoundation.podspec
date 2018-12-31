@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name             = 'BLFoundation'
-  s.version          = '0.8.1'
+  s.version          = '0.8.2'
   s.summary          = 'A set of useful categories for Foundation.'
   
   s.homepage = 'https://github.com/linhay/' + s.name
