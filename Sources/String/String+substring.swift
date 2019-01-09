@@ -124,36 +124,19 @@ public extension String {
 
 // MARK: - 截取
 public extension String {
-
   /// 截取: 获取指定字符串前的字符
   ///
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(before str: String) -> String {
-    guard let firstValue = str.first?.string, !self.isEmpty else { return "" }
-    
-    for index in 0..<count {
-      guard let value = self[index], firstValue == value else { continue }
-      if index + str.count >= count { return "" }
-      if self[index...index + str.count] == str { return self[..<index] }
-    }
-
-    return ""
+    return str.components(separatedBy: str).first ?? ""
   }
-
+  
   /// 截取: 获取指定字符串后的字符
   ///
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(after str: String) -> String {
-    guard let firstValue = str.first?.string, !self.isEmpty else { return "" }
-    
-    for index in 0..<count {
-      guard let value = self[index], firstValue == value else { continue }
-      if index + str.count >= count { return "" }
-      if self[index...index + str.count] == str { return self[(index + str.count + 1)...] }
-    }
-    
-    return ""
+    return str.components(separatedBy: str).last ?? ""
   }
 }
