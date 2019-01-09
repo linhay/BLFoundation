@@ -129,7 +129,7 @@ public extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(before str: String) -> String {
-    return str.components(separatedBy: str).first ?? ""
+    return self.components(separatedBy: str).first ?? ""
   }
   
   /// 截取: 获取指定字符串后的字符
@@ -137,6 +137,6 @@ public extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(after str: String) -> String {
-    return str.components(separatedBy: str).last ?? ""
+    return self.tr.components(separatedBy: str).last ?? ""
   }
 }
