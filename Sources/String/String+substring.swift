@@ -130,7 +130,7 @@ public extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(before str: String) -> String {
-    guard let firstValue = str.first?.string, self.isEmpty else { return "" }
+    guard let firstValue = str.first?.string, !self.isEmpty else { return "" }
     
     for index in 0..<count {
       guard let value = self[index], firstValue == value else { continue }
@@ -146,7 +146,7 @@ public extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(after str: String) -> String {
-    guard let firstValue = str.first?.string, self.isEmpty else { return "" }
+    guard let firstValue = str.first?.string, !self.isEmpty else { return "" }
     
     for index in 0..<count {
       guard let value = self[index], firstValue == value else { continue }

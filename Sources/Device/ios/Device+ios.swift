@@ -39,6 +39,13 @@ public extension Device {
     return self.version == version
   }
   
+  
+  /// apple 机型内部版本标识
+  public static var versionCode: String {
+    getInfo()
+    return getVersionCode()
+  }
+  
   /// 设备类型
   public static var type: Type {
     getInfo()
@@ -53,6 +60,7 @@ public extension Device {
   
   private static var _type = Type.unknown
   private static var _version = Version.unknown
+  private static var _versionCode = ""
 }
 
 
@@ -67,9 +75,9 @@ extension Device {
   }
   
   static private func getInfo() {
-    if _type != .unknown,_version != .unknown { return }
-    let code = getVersionCode()
-    switch code {
+    if _type != .unknown,_version != .unknown, !_versionCode.isEmpty { return }
+    _versionCode = getVersionCode()
+    switch _versionCode {
       /*** iPhone ***/
     case "iPhone3,1", "iPhone3,2", "iPhone3,3": _type = .iPhone; _version = .iPhone4
     case "iPhone4,1", "iPhone4,2", "iPhone4,3": _type = .iPhone; _version = .iPhone4S
@@ -122,7 +130,7 @@ extension Device {
 // MARK: - enum
 extension Device {
   
-  public enum `Type`: String {
+  public enum `Type`: String,CaseIterable {
     case iPhone
     case iPad
     case iPod
@@ -130,7 +138,7 @@ extension Device {
     case unknown
   }
   
-  public enum Version: String {
+  public enum Version: String,CaseIterable {
     /*** iPhone ***/
     case iPhone4
     case iPhone4S

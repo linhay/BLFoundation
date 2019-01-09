@@ -8,6 +8,10 @@ class Tests: XCTestCase {
     case address
   }
   
+  func testWIFI() {
+    let wifi = Device.WIFI()
+    print(wifi)
+  }
   
   func testIntFamily() {
     // .string
