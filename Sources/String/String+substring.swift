@@ -137,6 +137,6 @@ public extension String {
   /// - Parameter str: 指定字符串
   /// - Returns: 子串
   func substring(after str: String) -> String {
-    return self.tr.components(separatedBy: str).last ?? ""
+    return self.components(separatedBy: str).last ?? ""
   }
 }
