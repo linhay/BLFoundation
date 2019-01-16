@@ -28,4 +28,5 @@ git tag -a ${version} -m ${diff}
 # 推送tag
 git push origin ${version}
 
+pod cache clean  ${file} --all
 pod trunk push ${file} --allow-warnings

@@ -22,7 +22,7 @@
 
 import Foundation
 
-public extension UIDevice {
+public extension Device {
   
   /// 获取局域网IP
   public var wlanAddress: String? {
