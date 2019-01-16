@@ -1,23 +1,23 @@
 PODS:
-  - BLFoundation (0.8.2):
-    - BLFoundation/Coder (= 0.8.2)
-    - BLFoundation/Custom (= 0.8.2)
-    - BLFoundation/Data (= 0.8.2)
-    - BLFoundation/Date (= 0.8.2)
-    - BLFoundation/Device (= 0.8.2)
-    - BLFoundation/NSObject (= 0.8.2)
-    - BLFoundation/Stdlib (= 0.8.2)
-    - BLFoundation/String (= 0.8.2)
-    - BLFoundation/URL (= 0.8.2)
-  - BLFoundation/Coder (0.8.2)
-  - BLFoundation/Custom (0.8.2)
-  - BLFoundation/Data (0.8.2)
-  - BLFoundation/Date (0.8.2)
-  - BLFoundation/Device (0.8.2)
-  - BLFoundation/NSObject (0.8.2)
-  - BLFoundation/Stdlib (0.8.2)
-  - BLFoundation/String (0.8.2)
-  - BLFoundation/URL (0.8.2)
+  - BLFoundation (0.8.4):
+    - BLFoundation/Coder (= 0.8.4)
+    - BLFoundation/Custom (= 0.8.4)
+    - BLFoundation/Data (= 0.8.4)
+    - BLFoundation/Date (= 0.8.4)
+    - BLFoundation/Device (= 0.8.4)
+    - BLFoundation/NSObject (= 0.8.4)
+    - BLFoundation/Stdlib (= 0.8.4)
+    - BLFoundation/String (= 0.8.4)
+    - BLFoundation/URL (= 0.8.4)
+  - BLFoundation/Coder (0.8.4)
+  - BLFoundation/Custom (0.8.4)
+  - BLFoundation/Data (0.8.4)
+  - BLFoundation/Date (0.8.4)
+  - BLFoundation/Device (0.8.4)
+  - BLFoundation/NSObject (0.8.4)
+  - BLFoundation/Stdlib (0.8.4)
+  - BLFoundation/String (0.8.4)
+  - BLFoundation/URL (0.8.4)
 
 DEPENDENCIES:
   - BLFoundation (from `../`)
@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLFoundation: f492409dacd56734d18173bde085c753c0fc8b3c
+  BLFoundation: 6d09ea16eb109f248329f529f26852dae3a84b09
 
 PODFILE CHECKSUM: 1ec346d374e7039f2f28f82cb45b86055c93823c
 
