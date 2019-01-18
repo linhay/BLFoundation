@@ -52,15 +52,17 @@ public extension Device {
 }
 
 #if canImport(SystemConfiguration)
+
+import SystemConfiguration
 import SystemConfiguration.CaptiveNetwork
 
 public extension Device {
-  
+
   public struct WIFI {
     public var ssid: String? = nil
     public var bssid: String? = nil
     public var ssidData: Data? = nil
-    
+
     public init?() {
       guard let interfaceNames = CNCopySupportedInterfaces() as? [String] else { return nil }
       interfaceNames.forEach{ (name) in
@@ -71,7 +73,7 @@ public extension Device {
       }
     }
   }
-  
+
 }
 
 
