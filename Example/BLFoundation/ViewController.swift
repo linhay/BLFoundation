@@ -2,12 +2,12 @@
 //  ViewController.swift
 //  BLFoundation
 //
-//  Created by 158179948@qq.com on 08/15/2018.
-//  Copyright (c) 2018 158179948@qq.com. All rights reserved.
+//  Created by is.linhey@outlook.com on 08/15/2018.
+//  Copyright (c) 2018 is.linhey@outlook.com. All rights reserved.
 //
 
 import UIKit
-import BLFoundation
+//import BLFoundation
 
 class ViewController: UIViewController {
 

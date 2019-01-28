@@ -1,5 +1,5 @@
 framework module BLFoundation {
-  umbrella header "BLFoundation-umbrella.h"
+  umbrella header "BLFoundation-watchOS-umbrella.h"
 
   export *
   module * { export * }

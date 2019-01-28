@@ -8,9 +8,21 @@ class Tests: XCTestCase {
     case address
   }
   
+  
+  func testRuntime() {
+    print("------------------ ivars ---------------------------")
+    print(RunTime.print.ivars(from: RunTime.metaclass(from: UIView.self)!))
+    print("------------------ protocols ---------------------------")
+    print(RunTime.print.protocols(from: RunTime.metaclass(from: UIView.self)!))
+    print("------------------ methods ---------------------------")
+    print(RunTime.print.methods(from: RunTime.metaclass(from: UIView.self)!))
+    print("------------------ properties ---------------------------")
+    print(RunTime.print.properties(from: RunTime.metaclass(from: UIView.self)!))
+  }
+  
   func testWIFI() {
-    let wifi = Device.WIFI()
-    print(wifi)
+//    let wifi = Device.WIFI()
+//    print(wifi)
   }
   
   func testIntFamily() {
@@ -33,7 +45,6 @@ class Tests: XCTestCase {
     XCTAssert(1.abs == 1)
   }
   
-  
   func testDynamic() {
     let name = Dynamic("linhey")
     name.bind { (item) in
@@ -48,8 +59,6 @@ class Tests: XCTestCase {
     }
     
   }
-  
-  
   
   //  事件总线
   func testEventBus() {
@@ -121,5 +130,14 @@ class Tests: XCTestCase {
     XCTAssert(str.substring(after: "456") == "7890")
     XCTAssert(str.substring(after: "0") == "")
     XCTAssert("11111111".substring(after: "11") == "111111")
+  }
+  
+  func testData() {
+    let str = "123456"
+    guard let data = str.data(using: .utf8) else { return }
+    print(data.copyBytes(as: Int8.self))
+    let list = data.copyBytes(as: Int8.self)
+    let reuslt = Data(bytes: list, count: list.count)
+    XCTAssert(String(data: reuslt, encoding: .utf8) == str)
   }
 }

@@ -9,3 +9,11 @@ target 'BLFoundation_Example' do
     
   end
 end
+
+target 'BLFoundation_watch' do
+  pod 'BLFoundation', :path => '../'
+end
+
+target 'BLFoundation_watch Extension' do
+  pod 'BLFoundation', :path => '../'
+end

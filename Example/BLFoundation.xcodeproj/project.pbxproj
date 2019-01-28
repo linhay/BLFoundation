@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		267D5FD0E86AC1680E27F27C /* Pods_BLFoundation_watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAB6DFFF4DD66812DCB2BA4 /* Pods_BLFoundation_watch_Extension.framework */; };
 		293B93B912E70667C466E140 /* Pods_BLFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C3066F5C915B93D2112C5B /* Pods_BLFoundation_Example.framework */; };
 		4C646CAE6FFA99C37596215C /* Pods_BLFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99CC0C0D0C10B39741EE42C /* Pods_BLFoundation_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -15,7 +16,16 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		6395A515CD4464A6A33B271D /* Pods_BLFoundation_watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A20BF0A24F62B4F10BF0B3 /* Pods_BLFoundation_watch.framework */; };
 		CD86F56C21D76C320042296E /* trunk.sh in Resources */ = {isa = PBXBuildFile; fileRef = CD86F56B21D76C320042296E /* trunk.sh */; };
+		CDF3B0A921FC3CAA003C784D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF3B0A721FC3CAA003C784D /* Interface.storyboard */; };
+		CDF3B0AB21FC3CAC003C784D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF3B0AA21FC3CAC003C784D /* Assets.xcassets */; };
+		CDF3B0B221FC3CAC003C784D /* BLFoundation_watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CDF3B0B121FC3CAC003C784D /* BLFoundation_watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CDF3B0B721FC3CAC003C784D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B0B621FC3CAC003C784D /* InterfaceController.swift */; };
+		CDF3B0B921FC3CAC003C784D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B0B821FC3CAC003C784D /* ExtensionDelegate.swift */; };
+		CDF3B0BB21FC3CAC003C784D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B0BA21FC3CAC003C784D /* NotificationController.swift */; };
+		CDF3B0BD21FC3CAD003C784D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF3B0BC21FC3CAD003C784D /* Assets.xcassets */; };
+		CDF3B0C221FC3CAD003C784D /* BLFoundation_watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CDF3B0A521FC3CAA003C784D /* BLFoundation_watch.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,12 +36,53 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = BLFoundation;
 		};
+		CDF3B0B321FC3CAC003C784D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDF3B0B021FC3CAC003C784D;
+			remoteInfo = "BLFoundation_watch Extension";
+		};
+		CDF3B0C021FC3CAD003C784D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDF3B0A421FC3CA9003C784D;
+			remoteInfo = BLFoundation_watch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CDF3B0C821FC3CAD003C784D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CDF3B0B221FC3CAC003C784D /* BLFoundation_watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF3B0CA21FC3CAD003C784D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CDF3B0C221FC3CAD003C784D /* BLFoundation_watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05C3066F5C915B93D2112C5B /* Pods_BLFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBFF2241A3BC1FF64A68204 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		14834DB3E634D45938361B92 /* Pods-BLFoundation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Tests/Pods-BLFoundation_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2587DFB004F28BE0EC229876 /* Pods-BLFoundation_watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_watch Extension/Pods-BLFoundation_watch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		3C560AD2CD824339049BC6B1 /* Pods-BLFoundation_watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_watch Extension/Pods-BLFoundation_watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BLFoundation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLFoundation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +96,25 @@
 		7EF23C6963B7250CCD2147C5 /* BLFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BLFoundation.podspec; path = ../BLFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9015DD34B5099D75AE1B7076 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9C9025B5EBA7D30B4BF16ACE /* Pods-BLFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A4A20BF0A24F62B4F10BF0B3 /* Pods_BLFoundation_watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC171742889AF284DE7BB6AB /* Pods-BLFoundation_watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_watch.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_watch/Pods-BLFoundation_watch.release.xcconfig"; sourceTree = "<group>"; };
 		B77D2CBED5386F5B49EA1D6E /* Pods-BLFoundation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Tests/Pods-BLFoundation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C02FC4374EED705DA3910D60 /* Pods-BLFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CD86F56B21D76C320042296E /* trunk.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = trunk.sh; path = ../trunk.sh; sourceTree = "<group>"; };
+		CDF3B0A521FC3CAA003C784D /* BLFoundation_watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLFoundation_watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF3B0A821FC3CAA003C784D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		CDF3B0AA21FC3CAC003C784D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDF3B0AC21FC3CAC003C784D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF3B0B121FC3CAC003C784D /* BLFoundation_watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BLFoundation_watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF3B0B621FC3CAC003C784D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		CDF3B0B821FC3CAC003C784D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		CDF3B0BA21FC3CAC003C784D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		CDF3B0BC21FC3CAD003C784D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDF3B0BE21FC3CAD003C784D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF3B0BF21FC3CAD003C784D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EBAB6DFFF4DD66812DCB2BA4 /* Pods_BLFoundation_watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99CC0C0D0C10B39741EE42C /* Pods_BLFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9C06B6EC09F9B93EF86655 /* Pods-BLFoundation_watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLFoundation_watch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLFoundation_watch/Pods-BLFoundation_watch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +134,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7AD5C19595941D6CB7D24DFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6395A515CD4464A6A33B271D /* Pods_BLFoundation_watch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF3B0AE21FC3CAC003C784D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267D5FD0E86AC1680E27F27C /* Pods_BLFoundation_watch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +159,8 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for BLFoundation */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				CDF3B0A621FC3CAA003C784D /* BLFoundation_watch */,
+				CDF3B0B521FC3CAC003C784D /* BLFoundation_watch Extension */,
 				607FACD11AFB9204008FA782 /* Products */,
 				A0A1AB34BD56D4EEC825AA9C /* Pods */,
 				9C2E6671DCB66A06C3A07746 /* Frameworks */,
@@ -88,6 +172,8 @@
 			children = (
 				607FACD01AFB9204008FA782 /* BLFoundation_Example.app */,
 				607FACE51AFB9204008FA782 /* BLFoundation_Tests.xctest */,
+				CDF3B0A521FC3CAA003C784D /* BLFoundation_watch.app */,
+				CDF3B0B121FC3CAC003C784D /* BLFoundation_watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +233,8 @@
 			children = (
 				05C3066F5C915B93D2112C5B /* Pods_BLFoundation_Example.framework */,
 				F99CC0C0D0C10B39741EE42C /* Pods_BLFoundation_Tests.framework */,
+				EBAB6DFFF4DD66812DCB2BA4 /* Pods_BLFoundation_watch_Extension.framework */,
+				A4A20BF0A24F62B4F10BF0B3 /* Pods_BLFoundation_watch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,8 +246,35 @@
 				9C9025B5EBA7D30B4BF16ACE /* Pods-BLFoundation_Example.release.xcconfig */,
 				B77D2CBED5386F5B49EA1D6E /* Pods-BLFoundation_Tests.debug.xcconfig */,
 				14834DB3E634D45938361B92 /* Pods-BLFoundation_Tests.release.xcconfig */,
+				3C560AD2CD824339049BC6B1 /* Pods-BLFoundation_watch Extension.debug.xcconfig */,
+				2587DFB004F28BE0EC229876 /* Pods-BLFoundation_watch Extension.release.xcconfig */,
+				FC9C06B6EC09F9B93EF86655 /* Pods-BLFoundation_watch.debug.xcconfig */,
+				AC171742889AF284DE7BB6AB /* Pods-BLFoundation_watch.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDF3B0A621FC3CAA003C784D /* BLFoundation_watch */ = {
+			isa = PBXGroup;
+			children = (
+				CDF3B0A721FC3CAA003C784D /* Interface.storyboard */,
+				CDF3B0AA21FC3CAC003C784D /* Assets.xcassets */,
+				CDF3B0AC21FC3CAC003C784D /* Info.plist */,
+			);
+			path = BLFoundation_watch;
+			sourceTree = "<group>";
+		};
+		CDF3B0B521FC3CAC003C784D /* BLFoundation_watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CDF3B0B621FC3CAC003C784D /* InterfaceController.swift */,
+				CDF3B0B821FC3CAC003C784D /* ExtensionDelegate.swift */,
+				CDF3B0BA21FC3CAC003C784D /* NotificationController.swift */,
+				CDF3B0BC21FC3CAD003C784D /* Assets.xcassets */,
+				CDF3B0BE21FC3CAD003C784D /* Info.plist */,
+				CDF3B0BF21FC3CAD003C784D /* PushNotificationPayload.apns */,
+			);
+			path = "BLFoundation_watch Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +288,13 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				87907BB325C14A1ABA0A9699 /* [CP] Embed Pods Frameworks */,
+				CDF3B0CA21FC3CAD003C784D /* Embed Watch Content */,
+				61E8A452FCC29716B1716123 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CDF3B0C121FC3CAD003C784D /* PBXTargetDependency */,
 			);
 			name = BLFoundation_Example;
 			productName = BLFoundation;
@@ -203,13 +320,51 @@
 			productReference = 607FACE51AFB9204008FA782 /* BLFoundation_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CDF3B0A421FC3CA9003C784D /* BLFoundation_watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF3B0C921FC3CAD003C784D /* Build configuration list for PBXNativeTarget "BLFoundation_watch" */;
+			buildPhases = (
+				271BF3366A5FB088C3CA961F /* [CP] Check Pods Manifest.lock */,
+				CDF3B0A321FC3CA9003C784D /* Resources */,
+				CDF3B0C821FC3CAD003C784D /* Embed App Extensions */,
+				7AD5C19595941D6CB7D24DFA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDF3B0B421FC3CAC003C784D /* PBXTargetDependency */,
+			);
+			name = BLFoundation_watch;
+			productName = BLFoundation_watch;
+			productReference = CDF3B0A521FC3CAA003C784D /* BLFoundation_watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CDF3B0B021FC3CAC003C784D /* BLFoundation_watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF3B0C721FC3CAD003C784D /* Build configuration list for PBXNativeTarget "BLFoundation_watch Extension" */;
+			buildPhases = (
+				2C87F0D9BCAB195F86578D9A /* [CP] Check Pods Manifest.lock */,
+				CDF3B0AD21FC3CAC003C784D /* Sources */,
+				CDF3B0AE21FC3CAC003C784D /* Frameworks */,
+				CDF3B0AF21FC3CAC003C784D /* Resources */,
+				D252AD0FEFC257135B78E093 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BLFoundation_watch Extension";
+			productName = "BLFoundation_watch Extension";
+			productReference = CDF3B0B121FC3CAC003C784D /* BLFoundation_watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -221,6 +376,15 @@
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 1010;
 						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					CDF3B0A421FC3CA9003C784D = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
+					CDF3B0B021FC3CAC003C784D = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 3L8RM3MDLS;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -239,6 +403,8 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* BLFoundation_Example */,
 				607FACE41AFB9204008FA782 /* BLFoundation_Tests */,
+				CDF3B0A421FC3CA9003C784D /* BLFoundation_watch */,
+				CDF3B0B021FC3CAC003C784D /* BLFoundation_watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -262,9 +428,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDF3B0A321FC3CA9003C784D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF3B0AB21FC3CAC003C784D /* Assets.xcassets in Resources */,
+				CDF3B0A921FC3CAA003C784D /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF3B0AF21FC3CAC003C784D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF3B0BD21FC3CAD003C784D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		271BF3366A5FB088C3CA961F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BLFoundation_watch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C87F0D9BCAB195F86578D9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BLFoundation_watch Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4A50F0E51E2E5E0B080EF0A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,16 +510,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87907BB325C14A1ABA0A9699 /* [CP] Embed Pods Frameworks */ = {
+		61E8A452FCC29716B1716123 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BLFoundation_Example/Pods-BLFoundation_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BLFoundation/BLFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/BLFoundation-iOS/BLFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLFoundation.framework",
 			);
@@ -319,6 +550,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D252AD0FEFC257135B78E093 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLFoundation_watch Extension/Pods-BLFoundation_watch Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BLFoundation-watchOS/BLFoundation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLFoundation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLFoundation_watch Extension/Pods-BLFoundation_watch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -339,6 +592,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDF3B0AD21FC3CAC003C784D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF3B0BB21FC3CAC003C784D /* NotificationController.swift in Sources */,
+				CDF3B0B921FC3CAC003C784D /* ExtensionDelegate.swift in Sources */,
+				CDF3B0B721FC3CAC003C784D /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -346,6 +609,16 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* BLFoundation_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		CDF3B0B421FC3CAC003C784D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDF3B0B021FC3CAC003C784D /* BLFoundation_watch Extension */;
+			targetProxy = CDF3B0B321FC3CAC003C784D /* PBXContainerItemProxy */;
+		};
+		CDF3B0C121FC3CAD003C784D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDF3B0A421FC3CA9003C784D /* BLFoundation_watch */;
+			targetProxy = CDF3B0C021FC3CAD003C784D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -364,6 +637,14 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		CDF3B0A721FC3CAA003C784D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDF3B0A821FC3CAA003C784D /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -538,6 +819,120 @@
 			};
 			name = Release;
 		};
+		CDF3B0C321FC3CAD003C784D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC9C06B6EC09F9B93EF86655 /* Pods-BLFoundation_watch.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = BLFoundation_watch_Extension;
+				INFOPLIST_FILE = BLFoundation_watch/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.BLFoundation-Example.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		CDF3B0C421FC3CAD003C784D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC171742889AF284DE7BB6AB /* Pods-BLFoundation_watch.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = BLFoundation_watch_Extension;
+				INFOPLIST_FILE = BLFoundation_watch/Info.plist;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.BLFoundation-Example.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		CDF3B0C521FC3CAD003C784D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C560AD2CD824339049BC6B1 /* Pods-BLFoundation_watch Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3L8RM3MDLS;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "BLFoundation_watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.BLFoundation-Example.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		CDF3B0C621FC3CAD003C784D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2587DFB004F28BE0EC229876 /* Pods-BLFoundation_watch Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3L8RM3MDLS;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "BLFoundation_watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.BLFoundation-Example.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,6 +959,24 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF3B0C721FC3CAD003C784D /* Build configuration list for PBXNativeTarget "BLFoundation_watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF3B0C521FC3CAD003C784D /* Debug */,
+				CDF3B0C621FC3CAD003C784D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF3B0C921FC3CAD003C784D /* Build configuration list for PBXNativeTarget "BLFoundation_watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF3B0C321FC3CAD003C784D /* Debug */,
+				CDF3B0C421FC3CAD003C784D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

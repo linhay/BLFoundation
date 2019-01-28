@@ -1,0 +1,6 @@
+framework module BLFoundation {
+  umbrella header "BLFoundation-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

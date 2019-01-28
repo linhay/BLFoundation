@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name             = 'BLFoundation'
-  s.version          = '0.8.5'
+  s.version          = '0.8.6'
   s.summary          = 'A set of useful categories for Foundation.'
   
   s.homepage = 'https://github.com/linhay/' + s.name
@@ -29,8 +29,12 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Device' do |ss|
-    ss.source_files   = 'Sources/Device/*.swift'
-    ss.ios.source_files   = 'Sources/Device/ios/*.swift'
+    ss.watchos.source_files = ['Sources/Device/core/*.swift']
+    ss.tvos.source_files    = ['Sources/Device/core/*.swift']
+    ss.osx.source_files     = ['Sources/Device/core/*.swift']
+    ss.ios.source_files     = ['Sources/Device/core/*.swift', 'Sources/Device/ios/*.swift' ]
+    ss.ios.frameworks = 'SystemConfiguration'
+    ss.osx.frameworks = 'SystemConfiguration'
   end
   
   s.subspec 'Custom' do |ss|

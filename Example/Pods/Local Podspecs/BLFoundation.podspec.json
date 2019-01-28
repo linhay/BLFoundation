@@ -59,9 +59,28 @@
     },
     {
       "name": "Device",
-      "source_files": "Sources/Device/*.swift",
+      "watchos": {
+        "source_files": [
+          "Sources/Device/core/*.swift"
+        ]
+      },
+      "tvos": {
+        "source_files": [
+          "Sources/Device/core/*.swift"
+        ]
+      },
+      "osx": {
+        "source_files": [
+          "Sources/Device/core/*.swift"
+        ],
+        "frameworks": "SystemConfiguration"
+      },
       "ios": {
-        "source_files": "Sources/Device/ios/*.swift"
+        "source_files": [
+          "Sources/Device/core/*.swift",
+          "Sources/Device/ios/*.swift"
+        ],
+        "frameworks": "SystemConfiguration"
       }
     },
     {
