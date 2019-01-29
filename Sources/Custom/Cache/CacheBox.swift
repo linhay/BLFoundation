@@ -21,15 +21,25 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
 import Foundation
-import CommonCrypto
 
-public extension String {
+final class CacheBox<T: NSCoding> {
   
-  var md5: String {
-    guard let data = self.data(using: .utf8) else { return self }
-    var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-    _ = data.withUnsafeBytes { CC_MD5($0, CC_LONG(data.count), &digest) }
-    return digest.map { String(format: "%02x", $0) }.joined()
+  var key: String
+  let value: T
+  let create: TimeInterval
+  let expiration: TimeInterval
+  
+  init(key: String, value: T, expiration: TimeInterval = 0) {
+    self.key = key
+    self.value = value
+    if expiration > 0 {
+      self.create = Date().timeIntervalSince1970
+      self.expiration = self.create + expiration
+    }else {
+      self.create = 0
+      self.expiration = 0
+    }
+    
   }
   
 }

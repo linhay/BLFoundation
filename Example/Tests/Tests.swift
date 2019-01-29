@@ -8,6 +8,24 @@ class Tests: XCTestCase {
     case address
   }
   
+  func testCache() {
+    let cache = Cache<UIImage>()
+    print(cache.disk?.directory)
+    
+    for item in (0...100000) {
+      let key = "carboaan-\(item)"
+      cache.set(key: key, value: UIImage(named: "carbon (3)")!) {
+        print("set-" + key)
+      }
+      cache.get(key: key) { (value) in
+        print("get-\(key): \(value)")
+      }
+    }
+    
+//    cache.get(key: "carbon") { (value) in
+//      print(value)
+//    }
+  }
   
   func testRuntime() {
     print("------------------ ivars ---------------------------")

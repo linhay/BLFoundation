@@ -20,16 +20,17 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
-import Foundation
-import CommonCrypto
 
-public extension String {
+import Foundation
+
+public protocol CacheProtocol {
+  associatedtype Element: NSCoding
   
-  var md5: String {
-    guard let data = self.data(using: .utf8) else { return self }
-    var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-    _ = data.withUnsafeBytes { CC_MD5($0, CC_LONG(data.count), &digest) }
-    return digest.map { String(format: "%02x", $0) }.joined()
-  }
+  func get(key: String, completion: @escaping ((Element?) -> Void))
+  func set(key: String, value: Element, expiration: TimeInterval?, completion: (() -> Void)?)
+  func set(key: String, value: Element, completion: (() -> Void)?)
+  func remove(key: String, completion: (() -> Void)?)
+  func removeAll(completion: (() -> Void)?)
+  subscript(key: String) -> Element? { get set }
   
 }
