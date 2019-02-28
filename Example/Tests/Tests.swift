@@ -1,5 +1,47 @@
 import XCTest
 import BLFoundation
+import SQLite3
+
+
+class KVCache {
+  
+  var db: OpaquePointer? = nil
+  var dbPath: String = ""
+  
+  func dbOpen() -> Bool{
+    if db != nil { return true }
+    
+    if sqlite3_open(dbPath, &db) == SQLITE_OK {
+      print("資料庫連線成功")
+    }else{
+      print("資料庫連線失敗")
+    }
+    
+    let sql = """
+    create table if not exists manifest (
+    key                 text,
+    filename            text,
+    size                integer,
+    inline_data         blob,
+    modification_time   integer,
+    last_access_time    integer,
+    extended_data       blob,
+    primary key(key)
+    );
+    """ as NSString
+    
+    if sqlite3_exec(db, sql.utf8String, nil, nil, nil) == SQLITE_OK {
+      print("建立資料表成功")
+    }
+    return true
+  }
+  
+//  func close() -> Bool {
+//
+//  }
+  
+  
+}
 
 class Tests: XCTestCase {
   
@@ -9,22 +51,28 @@ class Tests: XCTestCase {
   }
   
   func testCache() {
-    let cache = Cache<UIImage>()
-    print(cache.disk?.directory)
+  
+    let kv = KVCache()
+      kv.dbPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("sqlite.db").absoluteString
+      kv.dbOpen()
+    print(kv.dbPath)
     
-    for item in (0...100000) {
-      let key = "carboaan-\(item)"
-      cache.set(key: key, value: UIImage(named: "carbon (3)")!) {
-        print("set-" + key)
-      }
-      cache.get(key: key) { (value) in
-        print("get-\(key): \(value)")
-      }
-    }
+    //    let cache = Cache<UIImage>()
+    //    print(cache.disk?.directory)
     
-//    cache.get(key: "carbon") { (value) in
-//      print(value)
-//    }
+    //    for item in (0...100000) {
+    //      let key = "carboaan-\(item)"
+    //      cache.set(key: key, value: UIImage(named: "carbon (3)")!) {
+    //        print("set-" + key)
+    //      }
+    //      cache.get(key: key) { (value) in
+    //        print("get-\(key): \(value)")
+    //      }
+    //    }
+    
+    //    cache.get(key: "carbon") { (value) in
+    //      print(value)
+    //    }
   }
   
   func testRuntime() {
@@ -39,8 +87,8 @@ class Tests: XCTestCase {
   }
   
   func testWIFI() {
-//    let wifi = Device.WIFI()
-//    print(wifi)
+    //    let wifi = Device.WIFI()
+    //    print(wifi)
   }
   
   func testIntFamily() {
@@ -91,7 +139,7 @@ class Tests: XCTestCase {
   //  机型
   func testDevice() {
     XCTAssert(Device.type != .unknown)
-//    XCTAssert(Device.version != .unknown)
+    //    XCTAssert(Device.version != .unknown)
     print(Device.type)
     print(Device.version)
   }
@@ -125,7 +173,7 @@ class Tests: XCTestCase {
     XCTAssert(str[-20] == nil)
     XCTAssert(str[0] == .some("1"))
     XCTAssert(str[9] == .some("0"))
-
+    
     XCTAssert(str[0...5] == "123456")
     XCTAssert(str[0..<5] == "12345")
     XCTAssert(str[..<5] == "12345")
@@ -135,7 +183,7 @@ class Tests: XCTestCase {
     XCTAssert(str[-10...(-5)] == "")
     XCTAssert(str[-10...100] == str)
     XCTAssert(str[3...6] == "4567")
-
+    
     XCTAssert(str[-10..<100] == str)
     XCTAssert(str[3..<6] == "456")
     
@@ -143,7 +191,7 @@ class Tests: XCTestCase {
     XCTAssert(str.substring(before: "456") == "123")
     XCTAssert(str.substring(before: "1") == "")
     XCTAssert("11111111".substring(before: "11") == "")
-
+    
     XCTAssert(str.substring(after: "") == "")
     XCTAssert(str.substring(after: "456") == "7890")
     XCTAssert(str.substring(after: "0") == "")
