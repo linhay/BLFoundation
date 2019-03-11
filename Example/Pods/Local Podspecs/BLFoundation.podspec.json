@@ -1,6 +1,6 @@
 {
   "name": "BLFoundation",
-  "version": "0.8.6",
+  "version": "0.8.8",
   "summary": "A set of useful categories for Foundation.",
   "homepage": "https://github.com/linhay/BLFoundation",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/linhay/BLFoundation.git",
-    "tag": "0.8.6"
+    "tag": "0.8.8"
   },
   "swift_version": "4.2",
   "requires_arc": true,
@@ -56,6 +56,10 @@
     {
       "name": "Data",
       "source_files": "Sources/Data/*.swift"
+    },
+    {
+      "name": "Dispatch",
+      "source_files": "Sources/Dispatch/*.swift"
     },
     {
       "name": "Device",

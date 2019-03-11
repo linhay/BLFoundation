@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name             = 'BLFoundation'
-  s.version          = '0.8.7'
+  s.version          = '0.8.8'
   s.summary          = 'A set of useful categories for Foundation.'
   
   s.homepage = 'https://github.com/linhay/' + s.name
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.public_header_files = ['Sources/BLFoundation.h']
   s.source_files = ['Sources/*.h']
 
-  list = ['Coder', 'NSObject', 'String', 'Stdlib', 'Date', 'URL', 'Data']
+  list = ['Coder', 'NSObject', 'String', 'Stdlib', 'Date', 'URL', 'Data', 'Dispatch']
   
   for name in list
     s.subspec name do |ss|

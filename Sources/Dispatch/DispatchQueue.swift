@@ -21,25 +21,23 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 import Foundation
 
-public extension NSObject {
+// https://juejin.im/post/5a31f000518825585132b566
+public extension DispatchQueue {
   
-  fileprivate struct NSObjectDataKey {
-    static let customKeys = UnsafeRawPointer(bitPattern:"com.BLFoundation.customKeys".hashValue)!
+  private static var onceTracker = [String]()
+  
+  public class func once(file: String = #file, function: String = #function, line: Int = #line, block: () -> Void) {
+    let token = file + ":" + function + ":" + String(line)
+    once(token: token, block: block)
   }
   
-  /// 存放自定义key-value
-  public var customKeys: [AnyHashable: Any] {
-    get {
-      if let value = (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any]) {
-        return value
-      }else{
-        objc_setAssociatedObject(self,NSObjectDataKey.customKeys,[:],.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        return (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any])!
-      }
-    }
-    set {
-      objc_setAssociatedObject(self,NSObjectDataKey.customKeys,newValue,.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-    }
+  public class func once(token: String, block: () -> Void) {
+    objc_sync_enter(self)
+    defer { objc_sync_exit(self) }
+    
+    if onceTracker.contains(token) { return }
+    
+    onceTracker.append(token)
+    block()
   }
-  
 }
