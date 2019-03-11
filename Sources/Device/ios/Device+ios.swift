@@ -40,88 +40,78 @@ public extension Device {
   }
   
   
-  /// apple 机型内部版本标识
-  public static var versionCode: String {
-    getInfo()
-    return getVersionCode()
-  }
   
   /// 设备类型
-  public static var type: Type {
-    getInfo()
-    return _type
-  }
+  public static var type: Type { return info.type }
   
   /// 设备版本类型
-  public static var version: Version {
-    getInfo()
-    return _version
-  }
+  public static var version: Version { return info.version }
   
-  private static var _type = Type.unknown
-  private static var _version = Version.unknown
-  private static var _versionCode = ""
-}
-
-
-// MARK: - private
-extension Device {
-  
-  static private func getVersionCode() -> String {
+  /// apple 机型内部版本标识
+  public static let versionCode: String = {
     var systemInfo = utsname()
     uname(&systemInfo)
     let versionCode: String = String(validatingUTF8: NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
     return versionCode
-  }
+  }()
   
-  static private func getInfo() {
-    if _type != .unknown,_version != .unknown, !_versionCode.isEmpty { return }
-    _versionCode = getVersionCode()
-    switch _versionCode {
+  static let info: (type: Type, version: Version) = {
+    switch versionCode {
       /*** iPhone ***/
-    case "iPhone3,1", "iPhone3,2", "iPhone3,3": _type = .iPhone; _version = .iPhone4
-    case "iPhone4,1", "iPhone4,2", "iPhone4,3": _type = .iPhone; _version = .iPhone4S
-    case "iPhone5,1", "iPhone5,2":              _type = .iPhone; _version = .iPhone5
-    case "iPhone5,3", "iPhone5,4":              _type = .iPhone; _version = .iPhone5C
-    case "iPhone6,1", "iPhone6,2":              _type = .iPhone; _version = .iPhone5S
-    case "iPhone7,2":                           _type = .iPhone; _version = .iPhone6
-    case "iPhone7,1":                           _type = .iPhone; _version = .iPhone6Plus
-    case "iPhone8,1":                           _type = .iPhone; _version = .iPhone6S
-    case "iPhone8,2":                           _type = .iPhone; _version = .iPhone6SPlus
-    case "iPhone8,4":                           _type = .iPhone; _version = .iPhoneSE
-    case "iPhone9,1", "iPhone9,3":              _type = .iPhone; _version = .iPhone7
-    case "iPhone9,2", "iPhone9,4":              _type = .iPhone; _version = .iPhone7Plus
-    case "iPhone10,1", "iPhone10,4":            _type = .iPhone; _version = .iPhone8
-    case "iPhone10,2", "iPhone10,5":            _type = .iPhone; _version = .iPhone8Plus
-    case "iPhone10,3", "iPhone10,6":            _type = .iPhone; _version = .iPhoneX
-    case "iPhone11,2":                          _type = .iPhone; _version = .iPhoneXS
-    case "iPhone11,4", "iPhone11,6":            _type = .iPhone; _version = .iPhoneXSMax
-    case "iPhone11,8":                           _type = .iPhone; _version = .iPhoneXR
+    case "iPhone3,1", "iPhone3,2", "iPhone3,3": return (type: .iPhone,version: .iPhone4)
+    case "iPhone4,1", "iPhone4,2", "iPhone4,3": return (type: .iPhone,version: .iPhone4S)
+    case "iPhone5,1", "iPhone5,2":              return (type: .iPhone,version: .iPhone5)
+    case "iPhone5,3", "iPhone5,4":              return (type: .iPhone,version: .iPhone5C)
+    case "iPhone6,1", "iPhone6,2":              return (type: .iPhone,version: .iPhone5S)
+    case "iPhone7,2":                           return (type: .iPhone,version: .iPhone6)
+    case "iPhone7,1":                           return (type: .iPhone,version: .iPhone6Plus)
+    case "iPhone8,1":                           return (type: .iPhone,version: .iPhone6S)
+    case "iPhone8,2":                           return (type: .iPhone,version: .iPhone6SPlus)
+    case "iPhone8,4":                           return (type: .iPhone,version: .iPhoneSE)
+    case "iPhone9,1", "iPhone9,3":              return (type: .iPhone,version: .iPhone7)
+    case "iPhone9,2", "iPhone9,4":              return (type: .iPhone,version: .iPhone7Plus)
+    case "iPhone10,1", "iPhone10,4":            return (type: .iPhone,version: .iPhone8)
+    case "iPhone10,2", "iPhone10,5":            return (type: .iPhone,version: .iPhone8Plus)
+    case "iPhone10,3", "iPhone10,6":            return (type: .iPhone,version: .iPhoneX)
+    case "iPhone11,2":                          return (type: .iPhone,version: .iPhoneXS)
+    case "iPhone11,4", "iPhone11,6":            return (type: .iPhone,version: .iPhoneXSMax)
+    case "iPhone11,8":                          return (type: .iPhone,version: .iPhoneXR)
       /*** iPad ***/
-    case "iPad1,1":                                 _type = .iPad; _version = .iPad1
-    case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":_type = .iPad; _version = .iPad2
-    case "iPad3,1", "iPad3,2", "iPad3,3":           _type = .iPad; _version = .iPad3
-    case "iPad3,4", "iPad3,5", "iPad3,6":           _type = .iPad; _version = .iPad4
-    case "iPad6,11", "iPad6,12":                    _type = .iPad; _version = .iPad5
-    case "iPad4,1", "iPad4,2", "iPad4,3":           _type = .iPad; _version = .iPadAir
-    case "iPad5,3", "iPad5,4":                      _type = .iPad; _version = .iPadAir2
-    case "iPad2,5", "iPad2,6", "iPad2,7":           _type = .iPad; _version = .iPadMini
-    case "iPad4,4", "iPad4,5", "iPad4,6":           _type = .iPad; _version = .iPadMini2
-    case "iPad4,7", "iPad4,8", "iPad4,9":           _type = .iPad; _version = .iPadMini3
-    case "iPad5,1", "iPad5,2":                      _type = .iPad; _version = .iPadMini4
-    case "iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2":_type = .iPad; _version = .iPadPro12_9Inch
-    case "iPad7,3", "iPad7,4":                      _type = .iPad; _version = .iPadPro10_5Inch
-    case "iPad6,3", "iPad6,4":                      _type = .iPad; _version = .iPadPro9_7Inch
+    case "iPad1,1":                                 return (type: .iPad,version: .iPad1)
+    case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return (type: .iPad,version: .iPad2)
+    case "iPad3,1", "iPad3,2", "iPad3,3":           return (type: .iPad,version: .iPad3)
+    case "iPad3,4", "iPad3,5", "iPad3,6":           return (type: .iPad,version: .iPad4)
+    case "iPad6,11", "iPad6,12":                    return (type: .iPad,version: .iPad5)
+    case "iPad4,1", "iPad4,2", "iPad4,3":           return (type: .iPad,version: .iPadAir)
+    case "iPad5,3", "iPad5,4":                      return (type: .iPad,version: .iPadAir2)
+    case "iPad2,5", "iPad2,6", "iPad2,7":           return (type: .iPad,version: .iPadMini)
+    case "iPad4,4", "iPad4,5", "iPad4,6":           return (type: .iPad,version: .iPadMini2)
+    case "iPad4,7", "iPad4,8", "iPad4,9":           return (type: .iPad,version: .iPadMini3)
+    case "iPad5,1", "iPad5,2":                      return (type: .iPad,version: .iPadMini4)
+    case "iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2":return (type: .iPad,version: .iPadPro12_9Inch)
+    case "iPad7,3", "iPad7,4":                      return (type: .iPad,version: .iPadPro10_5Inch)
+    case "iPad6,3", "iPad6,4":                      return (type: .iPad,version: .iPadPro9_7Inch)
       /*** iPod ***/
-    case "iPod1,1":                                 _type = .iPod; _version = .iPodTouch1Gen
-    case "iPod2,1":                                 _type = .iPod; _version = .iPodTouch2Gen
-    case "iPod3,1":                                 _type = .iPod; _version = .iPodTouch3Gen
-    case "iPod4,1":                                 _type = .iPod; _version = .iPodTouch4Gen
-    case "iPod5,1":                                 _type = .iPod; _version = .iPodTouch5Gen
-    case "iPod7,1":                                 _type = .iPod; _version = .iPodTouch6Gen
+    case "iPod1,1":                                 return (type: .iPod,version: .iPodTouch1Gen)
+    case "iPod2,1":                                 return (type: .iPod,version: .iPodTouch2Gen)
+    case "iPod3,1":                                 return (type: .iPod,version: .iPodTouch3Gen)
+    case "iPod4,1":                                 return (type: .iPod,version: .iPodTouch4Gen)
+    case "iPod5,1":                                 return (type: .iPod,version: .iPodTouch5Gen)
+    case "iPod7,1":                                 return (type: .iPod,version: .iPodTouch6Gen)
       /*** Simulator ***/
-    case "i386", "x86_64":                          _type = .simulator; _version = .simulator
-    default:                                        _type = .unknown;   _version = .unknown
+    case "i386", "x86_64":                          return (type: .simulator,version: .simulator)
+    default:                                        return (type: .unknown,version: .unknown)
+    }
+  }()
+}
+
+extension Device {
+  
+  /// 是否存在刘海
+  public static var isHasNotch: Bool {
+    switch version {
+    case .iPhoneX,.iPhoneXR,.iPhoneXS,.iPhoneXSMax: return true
+    default: return false
     }
   }
   
