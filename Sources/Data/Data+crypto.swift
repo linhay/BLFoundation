@@ -25,7 +25,7 @@ import CommonCrypto
 
 public extension Data {
   
-  public var md5: String {
+    var md5: String {
     var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
     _ = self.withUnsafeBytes { CC_MD5($0, CC_LONG(self.count), &digest) }
     return digest.map { String(format: "%02x", $0) }.joined()
