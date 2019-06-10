@@ -40,7 +40,6 @@ public extension Device {
     }
     
     
-    
     /// 设备类型
     static var type: Type { return info.type }
     

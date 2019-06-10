@@ -22,24 +22,24 @@
 import Foundation
 
 public extension NSObject {
-  
-  fileprivate struct NSObjectDataKey {
-    static let customKeys = UnsafeRawPointer(bitPattern:"com.BLFoundation.customKeys".hashValue)!
-  }
-  
-  /// 存放自定义key-value
-  public var customKeys: [AnyHashable: Any] {
-    get {
-      if let value = (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any]) {
-        return value
-      }else{
-        objc_setAssociatedObject(self,NSObjectDataKey.customKeys,[:],.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        return (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any])!
-      }
+
+    fileprivate struct NSObjectDataKey {
+        static let customKeys = UnsafeRawPointer(bitPattern:"com.BLFoundation.customKeys".hashValue)!
     }
-    set {
-      objc_setAssociatedObject(self,NSObjectDataKey.customKeys,newValue,.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+    /// 存放自定义key-value
+    var customKeys: [AnyHashable: Any] {
+        get {
+            if let value = (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any]) {
+                return value
+            }else{
+                objc_setAssociatedObject(self,NSObjectDataKey.customKeys,[:],.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                return (objc_getAssociatedObject(self,NSObjectDataKey.customKeys) as? [AnyHashable: Any])!
+            }
+        }
+        set {
+            objc_setAssociatedObject(self,NSObjectDataKey.customKeys,newValue,.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
-  }
-  
+
 }

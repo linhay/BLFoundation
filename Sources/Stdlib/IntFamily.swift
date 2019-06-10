@@ -23,11 +23,11 @@
 
 /* 协议继承关系
  https://github.com/apple/swift-evolution/blob/master/proposals/0104-improved-integers.md
-                +-------------+   +-------------+
-         +------>+   Numeric   |   | Comparable  |
-         |       |   (+,-,*)   |   | (==,<,>,...)|
-         |       +------------++   +---+---------+
-         |                     ^       ^
+ +-------------+   +-------------+
+ +------>+   Numeric   |   | Comparable  |
+ |       |   (+,-,*)   |   | (==,<,>,...)|
+ |       +------------++   +---+---------+
+ |                     ^       ^
  +-------+------------+        |       |
  |    SignedNumeric   |      +-+-------+-----------+
  |     (unary -)      |      |    BinaryInteger    |
@@ -39,78 +39,78 @@
  |  SignedInteger  |    |  FixedWidthInteger      |  |  UnsignedInteger  |
  |                 |    |(endianness,overflow,...)|  |                   |
  +---------------+-+    +-+--------------------+--+  +-+-----------------+
-                 ^        ^                    ^       ^
-                 |        |                    |       |
-                 |        |                    |       |
-                 ++--------+-+                +-+-------+-+
-                 |Int family |-+              |UInt family|-+
-                 +-----------+ |              +-----------+ |
-                 +-----------+                +-----------+
+ ^        ^                    ^       ^
+ |        |                    |       |
+ |        |                    |       |
+ ++--------+-+                +-+-------+-+
+ |Int family |-+              |UInt family|-+
+ +-----------+ |              +-----------+ |
+ +-----------+                +-----------+
  */
 
 
 import Foundation
 
 public extension Numeric {
-  /// 转换: String.
-  public var string: String { return String(describing: self) }
+    /// 转换: String.
+    var string: String { return String(describing: self) }
 }
 
 // MARK: - Int family
-public extension SignedInteger where Self: SignedInteger {
-  /// 绝对值
-  public var abs: Self { return Swift.abs(self) }
-  /// 检查: 是否为偶数
-  public var isEven: Bool { return (self % 2 == 0) }
-  /// 检查: 是否为奇数
-  public var isOdd: Bool { return (self % 2 != 0) }
-  /// 检查: 是否为正数
-  public var isPositive: Bool { return (self > 0) }
-  /// 检查: 是否为负数
-  public var isNegative: Bool { return (self < 0) }
-  /// 转换: Double.
-  public var double: Double { return Double(self) }
-  /// 转换: Float.
-  public var float: Float { return Float(self) }
+public extension SignedInteger {
+    /// 绝对值
+    var abs: Self { return Swift.abs(self) }
+    /// 检查: 是否为偶数
+    var isEven: Bool { return (self % 2 == 0) }
+    /// 检查: 是否为奇数
+    var isOdd: Bool { return (self % 2 != 0) }
+    /// 检查: 是否为正数
+    var isPositive: Bool { return (self > 0) }
+    /// 检查: 是否为负数
+    var isNegative: Bool { return (self < 0) }
+    /// 转换: Double.
+    var double: Double { return Double(self) }
+    /// 转换: Float.
+    var float: Float { return Float(self) }
 
-  /// 转换: Bool.
-  public var bool: Bool { return self == 0 ? false: true }
+    /// 转换: Bool.
+    var bool: Bool { return self == 0 ? false: true }
 
-  /// 计算: 位数
-  public var digits: Int {
-    guard self != 0 else { return 1 }
-    guard Int(fabs(Double(self))) > LONG_MAX else { return -1 }
-    return Int(log10(fabs(Double(self)))) + 1
-  }
+    /// 计算: 位数
+    var digits: Int {
+        guard self != 0 else { return 1 }
+        guard Int(fabs(Double(self))) > LONG_MAX else { return -1 }
+        return Int(log10(fabs(Double(self)))) + 1
+    }
 
 }
 
 
 // MARK: - UInt family
 public extension UnsignedInteger where Self: SignedInteger {
-  
-  /// 绝对值
-  public var abs: Self { return Swift.abs(self) }
-  /// 检查: 是否为偶数
-  public var isEven: Bool { return (self % 2 == 0) }
-  /// 检查: 是否为奇数
-  public var isOdd: Bool { return (self % 2 != 0) }
-  /// 检查: 是否为正数
-  public var isPositive: Bool { return (self > 0) }
-  /// 检查: 是否为负数
-  public var isNegative: Bool { return (self < 0) }
-  /// 转换: Double.
-  public var double: Double { return Double(self) }
-  /// 转换: Float.
-  public var float: Float { return Float(self) }
-  /// 转换: Bool.
-  public var bool: Bool { return self == 0 ? false: true }
-  
-  /// 计算: 位数
-  public var digits: Int {
-    guard self != 0 else { return 1 }
-    guard Int(fabs(Double(self))) > LONG_MAX else { return -1 }
-    return Int(log10(fabs(Double(self)))) + 1
-  }
-  
+
+    /// 绝对值
+    var abs: Self { return Swift.abs(self) }
+    /// 检查: 是否为偶数
+    var isEven: Bool { return (self % 2 == 0) }
+    /// 检查: 是否为奇数
+    var isOdd: Bool { return (self % 2 != 0) }
+    /// 检查: 是否为正数
+    var isPositive: Bool { return (self > 0) }
+    /// 检查: 是否为负数
+    var isNegative: Bool { return (self < 0) }
+    /// 转换: Double.
+    var double: Double { return Double(self) }
+    /// 转换: Float.
+    var float: Float { return Float(self) }
+    /// 转换: Bool.
+    var bool: Bool { return self == 0 ? false: true }
+
+    /// 计算: 位数
+    var digits: Int {
+        guard self != 0 else { return 1 }
+        guard Int(fabs(Double(self))) > LONG_MAX else { return -1 }
+        return Int(log10(fabs(Double(self)))) + 1
+    }
+
 }

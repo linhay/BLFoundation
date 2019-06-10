@@ -27,20 +27,20 @@ infix operator =~
 // MARK: - 操作符
 public extension String{
 
-  static public func*(str: String, num: Int) -> String {
+  static func*(str: String, num: Int) -> String {
     let stringBuilder = Array(repeating: str, count: num)
     return stringBuilder.joined()
   }
 
-  static public func*(num: Int,str: String) -> String {
+  static func*(num: Int,str: String) -> String {
     return  str * num
   }
 
-  static public func =~(lhs: String, rhs: String) -> Bool {
+  static func =~(lhs: String, rhs: String) -> Bool {
     return !Regex(rhs).matches(input: lhs).isEmpty
   }
 
-  static public func =~(lhs: String, rhs: RegexPattern) -> Bool {
+  static func =~(lhs: String, rhs: RegexPattern) -> Bool {
     return !Regex(rhs).matches(input: lhs).isEmpty
   }
 

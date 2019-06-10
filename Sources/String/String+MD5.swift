@@ -25,7 +25,7 @@ import CommonCrypto
 
 public extension String {
   
- public var md5: String {
+  var md5: String {
     guard let data = self.data(using: .utf8) else { return self }
     var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
     _ = data.withUnsafeBytes { CC_MD5($0, CC_LONG(data.count), &digest) }

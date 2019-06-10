@@ -46,7 +46,7 @@ public extension Dictionary {
   /// 根据下标集合获取元素集合
   ///
   /// - Parameter keys: 下标集合
-  public subscript(_ keys: [Key]) -> [Value] {
+   subscript(_ keys: [Key]) -> [Value] {
     return keys.compactMap {  self[$0] }
   }
   
@@ -54,7 +54,7 @@ public extension Dictionary {
   /// 根据下标集合获取元素集合
   ///
   /// - Parameter keys: 下标集合
-  public subscript(_ keys: Key...) -> [Value] {
+   subscript(_ keys: Key...) -> [Value] {
     return keys.compactMap {  self[$0] }
   }
   
@@ -65,7 +65,7 @@ public extension Dictionary {
   /// 从字典中随机取值
   ///
   /// - Returns: 值
-  public var random: (key: Key,value: Value)? {
+   var random: (key: Key,value: Value)? {
     guard let key = keys.randomElement(), let value = self[key] else { return nil }
     return (key: key,value: value)
   }
@@ -78,14 +78,14 @@ public extension Dictionary {
   ///
   /// - Parameter key: key名
   /// - Returns: 是否
-  public func has(key: Key) -> Bool {
+   func has(key: Key) -> Bool {
     return index(forKey: key) != nil
   }
   
   /// 格式化为Json
   ///
   /// - Returns: Json字符串
-  public func formatJSON(prettify: Bool = false) -> String {
+   func formatJSON(prettify: Bool = false) -> String {
     guard JSONSerialization.isValidJSONObject(self) else { return "{}" }
     let options = prettify ? JSONSerialization.WritingOptions.prettyPrinted: JSONSerialization.WritingOptions()
     do {
@@ -96,4 +96,37 @@ public extension Dictionary {
     }
   }
   
+}
+
+extension Dictionary {
+
+    func value<T>(for key: Key) -> T? {
+        return self[key] as? T
+    }
+
+    func value<T>(for key: Key, default value: T) -> T {
+        return self[key] as? T ?? value
+    }
+
+    func value<T: RawRepresentable>(for key: Key, default value: T) -> T {
+        guard let rawValue =  self[key] as? T.RawValue else { return value }
+        return T.init(rawValue: rawValue) ?? value
+    }
+
+    func safeValue<T: StringProtocol>(for key: Key) -> T {
+        return self.value(for: key, default: "")
+    }
+
+    func safeValue(for key: Key) -> Bool {
+        return self.value(for: key, default: false)
+    }
+
+    func safeValue<T: SignedInteger>(for key: Key) -> T {
+        return self.value(for: key, default: 0)
+    }
+
+    func safeValue(for key: Key) -> Double {
+        return self.value(for: key, default: 0.0)
+    }
+
 }

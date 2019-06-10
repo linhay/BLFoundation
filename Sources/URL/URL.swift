@@ -25,7 +25,7 @@ import Foundation
 public extension URL {
 
  /// 获取url参数集合
- public var querys: [String: String] {
+  var querys: [String: String] {
     var dict = [String: String]()
     if let query = query {
       query.components(separatedBy: "&").forEach { (item) in

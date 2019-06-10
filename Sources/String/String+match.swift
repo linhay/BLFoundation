@@ -25,33 +25,33 @@ import Foundation
 // MARK: - Emoji
 public extension String{
 
-  /// 提取: Emojis
- public var emojis: [String] {
-  let elements = unicodeScalars.compactMap { (scalar) -> String? in
-      switch scalar.value {
-      case 0x3030,
-           0x00AE,
-           0x00A9,
-           0x1D000...0x1F77F,
-           0x2100...0x278A,
-           0x2793...0x27BF,
-           0xFE00...0xFE0F,
-           0x1F900...0x1F9FF:
-        return String(scalar)
-      default: return nil
-      }
+    /// 提取: Emojis
+    var emojis: [String] {
+        let elements = unicodeScalars.compactMap { (scalar) -> String? in
+            switch scalar.value {
+            case 0x3030,
+                 0x00AE,
+                 0x00A9,
+                 0x1D000...0x1F77F,
+                 0x2100...0x278A,
+                 0x2793...0x27BF,
+                 0xFE00...0xFE0F,
+                 0x1F900...0x1F9FF:
+                return String(scalar)
+            default: return nil
+            }
+        }
+        return elements
     }
-    return elements
-  }
-  
- public func match(pattern: String) -> Bool {
-    return self =~ pattern
-  }
-  
- public func match(pattern: RegexPattern) -> Bool {
-    return self =~ pattern.pattern
-  }
-  
+
+    func match(pattern: String) -> Bool {
+        return self =~ pattern
+    }
+
+    func match(pattern: RegexPattern) -> Bool {
+        return self =~ pattern.pattern
+    }
+
 }
 
 
