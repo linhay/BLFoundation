@@ -206,4 +206,15 @@ class Tests: XCTestCase {
     let reuslt = Data(bytes: list, count: list.count)
     XCTAssert(String(data: reuslt, encoding: .utf8) == str)
   }
+
+    func testBTN() {
+        print("==================================ivars============================================")
+        RunTime.print.ivars(from: UIButton.self).forEach({ print($0) })
+        print("==================================properties============================================")
+        RunTime.print.properties(from: UIButton.self).forEach({ print($0) })
+        print("==================================methods============================================")
+        RunTime.print.methods(from: UIButton.self).forEach({ print($0) })
+        print("==================================protocols============================================")
+        RunTime.print.protocols(from: UIButton.self).forEach({ print($0) })
+    }
 }

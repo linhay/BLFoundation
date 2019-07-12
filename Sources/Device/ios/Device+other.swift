@@ -25,7 +25,7 @@ import Foundation
 public extension Device {
   
   /// 是否支持 Taptic Engine 功能
-  public var isSupportTaptic: Bool {
+    var isSupportTaptic: Bool {
     guard let version = Device.versionCode.split(separator: ",").first?.filter ({ (item) -> Bool in
       return !("a"..."z").contains(item)
     }), let num = Int(version) else { return false }
@@ -33,7 +33,7 @@ public extension Device {
   }
   
   /// 是否越狱
-  public var isJailbroken: Bool {
+    var isJailbroken: Bool {
     if Device.type == .simulator { return false }
     let paths = ["/Applications/Cydia.app",
                  "/private/var/lib/apt/",
